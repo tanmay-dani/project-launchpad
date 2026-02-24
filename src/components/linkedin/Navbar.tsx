@@ -24,7 +24,7 @@ const Navbar = () => {
             <a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
             <a href="#faq" className="text-sm text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
             <div className="flex items-center gap-2">
-              <Button variant="hero" size="sm" onClick={openModal}>Activate Premium — ₹399</Button>
+              <Button variant="hero" size="sm" onClick={openModal}>Activate Premium · ₹399</Button>
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="sm" className="aspect-square px-0 border-success text-success hover:bg-success hover:text-success-foreground">
                   <WhatsAppIcon className="w-4 h-4" />
@@ -45,7 +45,7 @@ const Navbar = () => {
               <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors" onClick={() => setIsOpen(false)}>Pricing</a>
               <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors" onClick={() => setIsOpen(false)}>FAQ</a>
               <div className="flex items-center gap-2">
-                <Button variant="hero" size="default" className="flex-1" onClick={() => { openModal(); setIsOpen(false); }}>Activate Premium — ₹399</Button>
+                <Button variant="hero" size="default" className="flex-1" onClick={() => { openModal(); setIsOpen(false); }}>Activate Premium · ₹399</Button>
                 <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="default" className="aspect-square px-0 border-success text-success hover:bg-success hover:text-success-foreground" onClick={() => setIsOpen(false)}>
                     <WhatsAppIcon className="w-5 h-5" />

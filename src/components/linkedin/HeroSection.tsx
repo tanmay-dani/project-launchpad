@@ -32,7 +32,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5 }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/6 rounded-full blur-[140px]"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-success/8 rounded-full blur-[140px]"
         />
         <motion.div
           initial={{ opacity: 0, scale: 0.9, rotate: -10 }}
@@ -40,7 +40,7 @@ const HeroSection = () => {
           transition={{ duration: 1.2, delay: 0.2 }}
           className="absolute inset-0 flex items-center justify-center pointer-events-none"
         >
-          <img src={linkedinLogo} alt="" className="w-[400px] md:w-[600px] lg:w-[700px] opacity-[0.03] select-none" aria-hidden="true" />
+          <img src={linkedinLogo} alt="" className="w-[400px] md:w-[600px] lg:w-[700px] opacity-[0.06] select-none" aria-hidden="true" />
         </motion.div>
       </div>
 
@@ -58,13 +58,22 @@ const HeroSection = () => {
             </span>
           </motion.div>
 
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.05 }}
+            className="flex justify-center mb-6"
+          >
+            <img src={linkedinLogo} alt="LinkedIn" className="h-12 md:h-14 w-auto" />
+          </motion.div>
+
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-5 leading-tight"
           >
-            Get 3 Months LinkedIn Premium <span className="text-gradient">for ₹399</span>
+            LinkedIn Premium <span className="text-gradient">for ₹399</span>
             <br />
             <span className="text-foreground">Pay After Activation</span>
           </motion.h1>
