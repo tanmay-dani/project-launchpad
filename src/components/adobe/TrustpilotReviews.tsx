@@ -36,13 +36,13 @@ const TrustpilotReviews = () => {
       <div className="container max-w-5xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-10">
-            <div className="flex items-center justify-center gap-3 mb-3">
+            <a href="https://www.trustpilot.com/review/thepremiumnest.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 mb-3 hover:opacity-80 transition-opacity">
               <img src={trustpilotStars} alt="Trustpilot 4 stars" className="h-6" />
               <span className="text-sm font-medium text-muted-foreground">
                 4.2 out of 5 · 7 reviews on
               </span>
               <img src={trustpilotLogo} alt="Trustpilot" className="h-5" />
-            </div>
+            </a>
             <h2 className="text-2xl md:text-3xl font-bold text-foreground">
               What Our Customers Say
             </h2>
