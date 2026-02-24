@@ -1,18 +1,22 @@
-import { Star } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 import trustpilotLogo from "@/assets/trustpilot-logo.svg";
 import trustpilotStars from "@/assets/trustpilot-stars-4.svg";
 import { reviews } from "@/data/reviews";
 
+const TrustpilotStar = ({ filled }: { filled: boolean }) => (
+  <svg viewBox="0 0 24 24" className="h-4 w-4" xmlns="http://www.w3.org/2000/svg">
+    <rect width="24" height="24" rx="1.5" fill={filled ? "#00b67a" : "#dcdce6"} />
+    <path
+      d="M12 4.5l2.39 4.84 5.34.78-3.87 3.77.91 5.33L12 16.77l-4.77 2.45.91-5.33-3.87-3.77 5.34-.78L12 4.5z"
+      fill="white"
+    />
+  </svg>
+);
+
 const StarRating = ({ rating }: { rating: number }) => (
   <div className="flex gap-0.5">
     {Array.from({ length: 5 }).map((_, i) => (
-      <Star
-        key={i}
-        className={`w-3.5 h-3.5 ${
-          i < rating ? "fill-primary text-primary" : "fill-muted text-muted"
-        }`}
-      />
+      <TrustpilotStar key={i} filled={i < rating} />
     ))}
   </div>
 );
