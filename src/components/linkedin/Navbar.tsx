@@ -26,7 +26,7 @@ const Navbar = () => {
                 <Button variant="hero" size="sm">Activate Premium — ₹399</Button>
               </a>
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="sm" className="aspect-square px-0 border-green-500 text-green-500 hover:bg-green-500 hover:text-white">
+                <Button variant="outline" size="sm" className="aspect-square px-0 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                   <WhatsAppIcon className="w-4 h-4" />
                 </Button>
               </a>
@@ -49,7 +49,7 @@ const Navbar = () => {
                   <Button variant="hero" size="default" className="w-full">Activate Premium — ₹399</Button>
                 </a>
                 <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" size="default" className="aspect-square px-0 border-green-500 text-green-500 hover:bg-green-500 hover:text-white" onClick={() => setIsOpen(false)}>
+                  <Button variant="outline" size="default" className="aspect-square px-0 border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => setIsOpen(false)}>
                     <WhatsAppIcon className="w-5 h-5" />
                   </Button>
                 </a>

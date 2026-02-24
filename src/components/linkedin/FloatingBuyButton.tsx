@@ -40,12 +40,12 @@ const FloatingBuyButton = () => {
           </span>
         </div>
         <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex-1">
-          <Button variant="hero" size="lg" className="w-full">
-            Activate Premium Now — Pay Later
+          <Button variant="hero" size="lg" className="w-full shadow-glow">
+            Activate Premium — Pay After ₹399
           </Button>
         </a>
         <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
-          <Button variant="outline" size="lg" className="aspect-square px-0 h-12 w-12 border-green-500 text-green-500 hover:bg-green-500 hover:text-white">
+          <Button variant="outline" size="lg" className="aspect-square px-0 h-12 w-12 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
             <WhatsAppIcon className="w-6 h-6" />
           </Button>
         </a>

@@ -147,52 +147,52 @@
     background-color: hsl(var(--background));
   }
 
-  /* LinkedIn Premium theme — professional blue */
+  /* LinkedIn Premium theme — optimized for Meta cold traffic */
   .linkedin-theme {
-    --background: 215 25% 8%;
-    --foreground: 210 20% 95%;
+    --background: 216 40% 7%;
+    --foreground: 0 0% 100%;
 
-    --card: 215 22% 11%;
-    --card-foreground: 210 20% 95%;
+    --card: 216 35% 10%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 215 22% 11%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 216 35% 10%;
+    --popover-foreground: 0 0% 100%;
 
-    /* LinkedIn blue as primary */
-    --primary: 201 89% 40%;
-    --primary-foreground: 0 0% 100%;
+    /* Teal-green CTA as primary — high contrast on dark navy */
+    --primary: 163 100% 39%;
+    --primary-foreground: 216 40% 7%;
 
-    --secondary: 215 18% 16%;
-    --secondary-foreground: 210 20% 90%;
+    --secondary: 216 25% 14%;
+    --secondary-foreground: 215 20% 77%;
 
-    --muted: 215 15% 20%;
-    --muted-foreground: 215 15% 60%;
+    --muted: 216 20% 18%;
+    --muted-foreground: 215 15% 62%;
 
-    --accent: 215 18% 18%;
-    --accent-foreground: 210 20% 95%;
+    --accent: 216 25% 16%;
+    --accent-foreground: 0 0% 95%;
 
     --trust: 201 89% 48%;
     --trust-foreground: 0 0% 100%;
 
-    --success: 160 70% 45%;
-    --success-foreground: 160 70% 98%;
+    --success: 163 100% 39%;
+    --success-foreground: 216 40% 7%;
 
-    --destructive: 0 65% 55%;
+    --destructive: 0 72% 55%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 215 18% 18%;
-    --input: 215 18% 18%;
-    --ring: 201 89% 40%;
+    --border: 216 22% 16%;
+    --input: 216 22% 16%;
+    --ring: 163 100% 39%;
 
     --radius: 0.75rem;
 
-    --gradient-primary: linear-gradient(135deg, hsl(201 89% 40%) 0%, hsl(201 85% 50%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(163 100% 39%) 0%, hsl(155 85% 45%) 100%);
     --gradient-trust: linear-gradient(135deg, hsl(201 89% 45%) 0%, hsl(210 80% 50%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(215 22% 11%) 0%, hsl(215 25% 8%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(215 20% 13%) 0%, hsl(215 22% 10%) 100%);
-    --shadow-glow: 0 0 50px -15px hsl(201 89% 40% / 0.35);
+    --gradient-subtle: linear-gradient(180deg, hsl(216 35% 10%) 0%, hsl(216 40% 7%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(216 30% 12%) 0%, hsl(216 35% 9%) 100%);
+    --shadow-glow: 0 0 60px -10px hsl(163 100% 39% / 0.4);
     --shadow-trust: 0 0 50px -15px hsl(201 89% 48% / 0.3);
-    --shadow-card: 0 20px 40px -12px hsl(215 30% 5% / 0.4);
+    --shadow-card: 0 20px 40px -12px hsl(216 40% 3% / 0.5);
 
     color: hsl(var(--foreground));
     background-color: hsl(var(--background));

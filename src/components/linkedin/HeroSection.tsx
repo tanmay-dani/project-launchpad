@@ -11,7 +11,6 @@ const HeroSection = () => {
   const [vouchersLeft, setVouchersLeft] = useState(14);
 
   useEffect(() => {
-    // Simulate slow scarcity drain
     const stored = sessionStorage.getItem("li-vouchers");
     if (stored) setVouchersLeft(parseInt(stored));
     const interval = setInterval(() => {
@@ -26,27 +25,21 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
-      {/* Background Effects */}
+      {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/8 rounded-full blur-[140px]"
-        />
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-trust/5 rounded-full blur-[120px]"
+          transition={{ duration: 1.5 }}
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/6 rounded-full blur-[140px]"
         />
         <motion.div
           initial={{ opacity: 0, scale: 0.9, rotate: -10 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
+          transition={{ duration: 1.2, delay: 0.2 }}
           className="absolute inset-0 flex items-center justify-center pointer-events-none"
         >
-          <img src={linkedinLogo} alt="" className="w-[400px] md:w-[600px] lg:w-[700px] opacity-[0.04] select-none" aria-hidden="true" />
+          <img src={linkedinLogo} alt="" className="w-[400px] md:w-[600px] lg:w-[700px] opacity-[0.03] select-none" aria-hidden="true" />
         </motion.div>
       </div>
 
@@ -56,42 +49,44 @@ const HeroSection = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 bg-destructive/15 border border-destructive/30 rounded-full px-5 py-2 mb-6 backdrop-blur-sm"
           >
             <span className="w-2 h-2 bg-destructive rounded-full animate-pulse" />
             <span className="text-sm font-semibold tracking-wide text-destructive">
-              ⚠️ Limited Stock: Only {vouchersLeft} Vouchers Left for February
+              ⚠️ Only {vouchersLeft} Vouchers Left for February
             </span>
           </motion.div>
 
-          {/* Main Headline — Outcome focused */}
+          {/* Direct headline — Meta-optimized */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+            transition={{ duration: 0.7, delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-5 leading-tight"
           >
-            Get The <span className="text-gradient">'Gold Badge'</span> Advantage
+            Get 3 Months LinkedIn Premium
             <br />
-            & Land Interviews <span className="text-success">3x Faster</span>
+            <span className="text-gradient">for ₹399</span> — <span className="text-foreground">Pay After Activation</span>
           </motion.h1>
 
-          {/* Sub-headline */}
+          {/* Sub-headline — clear value prop */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+            transition={{ duration: 0.7, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8"
           >
-            Unlock <span className="text-foreground font-medium">3 Months of LinkedIn Premium Career</span> (Official Plan) for the price of a coffee.
+            Official plan. <span className="text-foreground font-medium">Your own email.</span> InMail credits, Gold Badge, 21,000+ courses.
+            <br className="hidden md:block" />
+            <span className="text-primary font-bold">We activate first. You pay only after you see it working.</span>
           </motion.p>
 
-          {/* Grand Slam Price Hook */}
+          {/* Price Anchor Card */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.7, delay: 0.3 }}
             className="bg-gradient-card rounded-2xl border border-primary/30 p-6 md:p-8 max-w-lg mx-auto mb-8 shadow-glow"
           >
             <div className="flex items-center justify-center gap-6 mb-5">
@@ -101,16 +96,15 @@ const HeroSection = () => {
               </div>
               <div className="w-px h-14 bg-border" />
               <div className="text-center">
-                <p className="text-xs text-success mb-1">Your Price</p>
+                <p className="text-xs text-primary mb-1">Your Price</p>
                 <p className="text-3xl md:text-4xl font-bold text-gradient">₹399</p>
-                <span className="inline-block mt-1 text-xs font-bold bg-success/20 text-success px-2 py-0.5 rounded-full">SAVE 95%</span>
+                <span className="inline-block mt-1 text-xs font-bold bg-primary/20 text-primary px-2 py-0.5 rounded-full">SAVE 95%</span>
               </div>
             </div>
 
-            {/* The Guarantee Hooks */}
             <div className="space-y-2 text-left">
               <div className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-success flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
                 <span className="text-sm text-foreground">Activated on <strong>YOUR</strong> personal email</span>
               </div>
               <div className="flex items-center gap-2.5">
@@ -124,26 +118,23 @@ const HeroSection = () => {
             </div>
           </motion.div>
 
-          {/* CTA Buttons */}
+          {/* CTA — Single dominant green */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6"
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="flex flex-col items-center gap-3 mb-6"
           >
-            <div className="flex items-center gap-2">
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                <Button variant="hero" size="xl" className="group">
-                  Yes! Upgrade My Career for ₹399
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </a>
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                <Button variant="heroOutline" size="xl" className="aspect-square px-0">
-                  <WhatsAppIcon className="w-6 h-6" />
-                </Button>
-              </a>
-            </div>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              <Button variant="hero" size="xl" className="group shadow-glow">
+                Yes! Activate Premium for ₹399
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <WhatsAppIcon className="w-4 h-4" />
+              Have questions? Chat with a human
+            </a>
           </motion.div>
 
           <motion.p
@@ -152,14 +143,14 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="text-xs text-muted-foreground mb-12"
           >
-            No login details required. 100% Safe. Pay only after activation.
+            No password needed · Instant activation · 2,400+ customers served
           </motion.p>
 
           {/* Trust Badges */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.7, delay: 0.6 }}
             className="grid grid-cols-3 gap-6 max-w-xl mx-auto"
           >
             <div className="flex flex-col items-center gap-2">
@@ -176,9 +167,9 @@ const HeroSection = () => {
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
-                <Clock className="w-5 h-5 text-success" />
+                <Clock className="w-5 h-5 text-primary" />
               </div>
-              <p className="text-xs text-success font-semibold">Pay After Activation</p>
+              <p className="text-xs text-primary font-semibold">Pay After Activation</p>
             </div>
           </motion.div>
         </div>
