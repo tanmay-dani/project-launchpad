@@ -70,6 +70,14 @@ export default {
           DEFAULT: "hsl(var(--success))",
           foreground: "hsl(var(--success-foreground))",
         },
+        check: {
+          DEFAULT: "hsl(var(--check))",
+          foreground: "hsl(var(--check-foreground))",
+        },
+        "premium-gold": {
+          DEFAULT: "hsl(var(--premium-gold))",
+          foreground: "hsl(var(--premium-gold-foreground))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
