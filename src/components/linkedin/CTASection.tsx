@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import WhatsAppIcon from "../adobe/WhatsAppIcon";
 import ScrollReveal from "../adobe/ScrollReveal";
 
 const WHATSAPP_LINK = "https://wa.me/919040914544?text=Hi%2C%20I%20want%20to%20avail%20LinkedIn%20Premium%20Career%20for%203%20months%20at%20₹399";
@@ -21,11 +22,17 @@ const CTASection = () => {
               Join thousands of professionals who are supercharging their career with LinkedIn Premium at a fraction of the cost.
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 <Button variant="hero" size="xl" className="group">
-                  Get Premium Career — ₹399
+                  Yes! Upgrade My Career — ₹399
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                <Button variant="heroOutline" size="xl" className="gap-2">
+                  <WhatsAppIcon className="w-5 h-5" />
+                  Have Questions? Chat with a Human
                 </Button>
               </a>
             </div>
