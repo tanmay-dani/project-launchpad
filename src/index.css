@@ -149,56 +149,56 @@
 
   /* LinkedIn Premium theme — optimized for Meta cold traffic */
   .linkedin-theme {
-    --background: 216 40% 7%;
-    --foreground: 0 0% 100%;
+    --background: 218 35% 8%;
+    --foreground: 210 20% 95%;
 
-    --card: 216 35% 10%;
-    --card-foreground: 0 0% 100%;
+    --card: 218 30% 11%;
+    --card-foreground: 210 20% 95%;
 
-    --popover: 216 35% 10%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 218 30% 11%;
+    --popover-foreground: 210 20% 95%;
 
-    /* Subtle blue for general UI — icons, borders, labels */
-    --primary: 210 45% 55%;
+    /* Softer blue — easy on eyes, still clearly LinkedIn */
+    --primary: 210 55% 58%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 216 25% 14%;
-    --secondary-foreground: 215 20% 77%;
+    --secondary: 218 22% 15%;
+    --secondary-foreground: 215 15% 78%;
 
-    --muted: 216 20% 18%;
-    --muted-foreground: 215 15% 62%;
+    --muted: 218 18% 18%;
+    --muted-foreground: 215 12% 55%;
 
-    --accent: 216 25% 16%;
-    --accent-foreground: 0 0% 95%;
+    --accent: 218 22% 17%;
+    --accent-foreground: 210 15% 92%;
 
-    --trust: 210 45% 55%;
+    --trust: 210 55% 58%;
     --trust-foreground: 0 0% 100%;
 
-    /* LinkedIn Blue = ACTION — CTAs, savings, badges */
-    --success: 210 100% 40%;
+    /* CTA blue — slightly brighter but not neon */
+    --success: 210 75% 50%;
     --success-foreground: 0 0% 100%;
 
-    --destructive: 0 72% 55%;
+    --destructive: 0 60% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 216 22% 16%;
-    --input: 216 22% 16%;
-    --ring: 210 100% 40%;
+    --border: 218 18% 17%;
+    --input: 218 18% 17%;
+    --ring: 210 75% 50%;
+
+    --radius: 0.75rem;
 
     /* LinkedIn Premium Gold */
     --premium-gold: 42 80% 55%;
     --premium-gold-foreground: 42 90% 15%;
 
-    --radius: 0.75rem;
-
-    /* CTA gradient uses LinkedIn Blue */
-    --gradient-primary: linear-gradient(135deg, hsl(210 100% 40%) 0%, hsl(210 90% 50%) 100%);
-    --gradient-trust: linear-gradient(135deg, hsl(210 45% 50%) 0%, hsl(210 50% 60%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(216 35% 10%) 0%, hsl(216 40% 7%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(216 30% 12%) 0%, hsl(216 35% 9%) 100%);
-    --shadow-glow: 0 0 60px -10px hsl(210 100% 40% / 0.4);
-    --shadow-trust: 0 0 50px -15px hsl(210 45% 55% / 0.3);
-    --shadow-card: 0 20px 40px -12px hsl(216 40% 3% / 0.5);
+    /* Softer gradients & glows */
+    --gradient-primary: linear-gradient(135deg, hsl(210 75% 50%) 0%, hsl(210 65% 58%) 100%);
+    --gradient-trust: linear-gradient(135deg, hsl(210 50% 55%) 0%, hsl(210 45% 62%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(218 30% 11%) 0%, hsl(218 35% 8%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(218 28% 13%) 0%, hsl(218 30% 10%) 100%);
+    --shadow-glow: 0 0 50px -12px hsl(210 75% 50% / 0.25);
+    --shadow-trust: 0 0 40px -15px hsl(210 55% 58% / 0.2);
+    --shadow-card: 0 20px 40px -12px hsl(218 40% 4% / 0.5);
 
     color: hsl(var(--foreground));
     background-color: hsl(var(--background));
