@@ -3,10 +3,14 @@ import { products } from "@/data/products";
 const logos = products.map((p) => ({ id: p.id, name: p.name, logo: p.logo }));
 const duplicated = [...logos, ...logos];
 
-export function LogoBanner() {
+export function LogoBanner({ onProductClick }: { onProductClick?: (id: number) => void }) {
   const handleClick = (id: number) => {
-    const el = document.getElementById(`product-${id}`);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+    if (onProductClick) {
+      onProductClick(id);
+    } else {
+      const el = document.getElementById(`product-${id}`);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
   };
 
   return (

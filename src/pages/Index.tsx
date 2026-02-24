@@ -239,7 +239,16 @@ const Index = () => {
               </button>
             </motion.div>
 
-            <LogoBanner />
+            <LogoBanner onProductClick={(id) => {
+              setActiveCategory("all");
+              setSearchQuery("");
+              setNavCategoryActive(false);
+              setSortOrder("default");
+              setTimeout(() => {
+                const el = document.getElementById(`product-${id}`);
+                if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+              }, 100);
+            }} />
           </div>
         </header>
       )}
