@@ -64,9 +64,9 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-5 leading-tight"
           >
-            Get 3 Months LinkedIn Premium
+            Get 3 Months LinkedIn Premium <span className="text-gradient">for ₹399</span>
             <br />
-            <span className="text-gradient">for ₹399</span> — <span className="text-foreground">Pay After Activation</span>
+            <span className="text-foreground">Pay After Activation</span>
           </motion.h1>
 
           <motion.p
