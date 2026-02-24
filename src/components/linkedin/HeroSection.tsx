@@ -119,29 +119,18 @@ const HeroSection = () => {
           </motion.div>
 
           {/* Trustpilot Badge */}
-          <motion.div
+          <motion.a
+            href="#reviews"
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.28 }}
-            className="flex items-center justify-center gap-3 mb-8"
+            className="flex items-center justify-center gap-2 mb-8 hover:opacity-80 transition-opacity cursor-pointer"
           >
-            <a
-              href="#reviews"
-              className="flex items-center gap-2 hover:opacity-80 transition-opacity"
-            >
-              <span className="text-sm text-muted-foreground">Rated <span className="text-foreground font-semibold">4.2</span> out of 5</span>
-              <img src={trustpilotStars} alt="4 out of 5 stars" className="h-4" />
-              <span className="text-sm text-muted-foreground">based on 7 reviews on</span>
-            </a>
-            <a
-              href="https://www.trustpilot.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity"
-            >
-              <img src={trustpilotLogo} alt="Trustpilot" className="h-5" />
-            </a>
-          </motion.div>
+            <span className="text-sm text-muted-foreground">Rated <span className="text-foreground font-semibold">4.2</span> out of 5</span>
+            <img src={trustpilotStars} alt="4 out of 5 stars" className="h-4" />
+            <span className="text-sm text-muted-foreground">based on 7 reviews on</span>
+            <img src={trustpilotLogo} alt="Trustpilot" className="h-5" />
+          </motion.a>
 
           {/* Pricing Card */}
           <motion.div
