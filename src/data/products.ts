@@ -45,6 +45,7 @@ import mofosLogo from "@/assets/logos/mofos.png";
 import realitykingsLogo from "@/assets/logos/realitykings.png";
 import myfitnesspalLogo from "@/assets/logos/myfitnesspal.png";
 import surfsharkLogo from "@/assets/logos/surfshark.png";
+import onepasswordLogo from "@/assets/logos/1password.png";
 
 export const products: Product[] = [
   {
@@ -517,6 +518,24 @@ export const products: Product[] = [
       "Industry-leading AES-256-GCM encryption",
       "Strict no-logs policy for total privacy",
       "CleanWeb ad & malware blocker included",
+    ],
+    category: "security",
+  },
+  {
+    id: 27,
+    name: "1Password Premium",
+    emoji: "🔑",
+    logo: onepasswordLogo,
+    tagline: "The world's most trusted password manager for all your devices.",
+    price: "₹999",
+    originalPrice: "₹2,999/yr",
+    duration: "1 Year",
+    features: [
+      "Unlimited passwords, cards & secure notes",
+      "Autofill across all browsers and devices",
+      "Watchtower alerts for breached & weak passwords",
+      "Two-factor authentication & passkey support",
+      "1GB encrypted document storage",
     ],
     category: "security",
   },
