@@ -32,7 +32,9 @@ const LinkedInLanding = () => {
           {/* 6. Scarcity — Why it's cheap + urgency */}
           <ScarcityExplainer />
           {/* 7. Social Proof */}
-          <TrustpilotReviews />
+          <div id="reviews">
+            <TrustpilotReviews />
+          </div>
           {/* 8. Risk Reversal — Pay after activation */}
           <GuaranteeSection />
           {/* 9. Objection Handling */}
