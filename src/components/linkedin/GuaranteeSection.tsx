@@ -46,7 +46,7 @@ const GuaranteeSection = () => {
                 ))}
               </div>
 
-              <div className="bg-check/8 border border-check/15 rounded-xl p-5 max-w-md mx-auto">
+              <div className="bg-check/8 border border-check/15 rounded-xl p-5 max-w-md mx-auto mb-4">
                 <div className="flex items-center justify-center gap-2 mb-1">
                   <CheckCircle2 className="w-5 h-5 text-check" />
                   <span className="text-foreground font-bold text-lg">Literally Zero Risk</span>
@@ -54,6 +54,11 @@ const GuaranteeSection = () => {
                 <p className="text-sm text-muted-foreground">
                   If Premium doesn't show up on your account, you pay ₹0. Not ₹1. Not ₹399. <span className="text-foreground font-medium">Absolutely nothing.</span>
                 </p>
+              </div>
+
+              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                <span className="text-premium-gold">★★★★</span><span className="text-muted-foreground/50">★</span>
+                <span>Rated <span className="text-foreground font-semibold">4.2 on Trustpilot</span> based on 7 reviews</span>
               </div>
             </div>
           </div>
