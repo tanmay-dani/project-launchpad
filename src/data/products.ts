@@ -44,6 +44,7 @@ import pornhubLogo from "@/assets/logos/pornhub.png";
 import mofosLogo from "@/assets/logos/mofos.png";
 import realitykingsLogo from "@/assets/logos/realitykings.png";
 import myfitnesspalLogo from "@/assets/logos/myfitnesspal.png";
+import surfsharkLogo from "@/assets/logos/surfshark.png";
 
 export const products: Product[] = [
   {
@@ -500,5 +501,23 @@ export const products: Product[] = [
       "Downloadable progress reports & insights",
     ],
     category: "wellness",
+  },
+  {
+    id: 26,
+    name: "Surfshark VPN",
+    emoji: "🦈",
+    logo: surfsharkLogo,
+    tagline: "Fast, secure VPN with 4,500+ servers in 100 countries.",
+    price: "₹99",
+    originalPrice: "₹1,000+/mo",
+    duration: "1 Month",
+    features: [
+      "Single device login — secure your primary device",
+      "4,500+ servers across 100 countries",
+      "Industry-leading AES-256-GCM encryption",
+      "Strict no-logs policy for total privacy",
+      "CleanWeb ad & malware blocker included",
+    ],
+    category: "security",
   },
 ];
