@@ -24,7 +24,7 @@ const CTASection = () => {
             <p className="text-muted-foreground text-lg mb-3 max-w-xl mx-auto">
               3 months. Official plan. Activated on your email.
             </p>
-            <p className="text-primary font-bold text-lg mb-8">
+            <p className="text-success font-bold text-lg mb-8">
               Pay only after you see the Gold Badge on your profile.
             </p>
             
@@ -40,9 +40,9 @@ const CTASection = () => {
             </div>
 
             <p className="text-sm text-muted-foreground mt-6">
-              <span className="text-primary">✓</span> Your own email &nbsp;
-              <span className="text-primary">✓</span> Pay after activation &nbsp;
-              <span className="text-primary">✓</span> No password needed
+              <span className="text-success">✓</span> Your own email &nbsp;
+              <span className="text-success">✓</span> Pay after activation &nbsp;
+              <span className="text-success">✓</span> No password needed
             </p>
           </div>
         </ScrollReveal>

@@ -58,9 +58,9 @@ const ValueStack = () => {
             ))}
 
             {/* Total */}
-            <div className="grid grid-cols-[1fr_auto] gap-4 px-6 py-5 bg-primary/10 border-t-2 border-primary/30">
+            <div className="grid grid-cols-[1fr_auto] gap-4 px-6 py-5 bg-success/10 border-t-2 border-success/30">
               <span className="text-base md:text-lg font-bold text-foreground uppercase">Total Value</span>
-              <span className="text-base md:text-lg font-bold text-gradient text-right">₹17,000+</span>
+              <span className="text-base md:text-lg font-bold text-success text-right">₹17,000+</span>
             </div>
           </div>
         </ScrollReveal>
@@ -69,7 +69,7 @@ const ValueStack = () => {
         <ScrollReveal delay={0.2}>
           <div className="text-center mt-10">
             <p className="text-muted-foreground text-lg mb-2">You Get All Of This For Just:</p>
-            <p className="text-5xl md:text-7xl font-bold text-gradient">₹399</p>
+            <p className="text-5xl md:text-7xl font-bold text-success">₹399</p>
             <p className="text-muted-foreground mt-2">One-time payment • 3 months • Your own account</p>
           </div>
         </ScrollReveal>

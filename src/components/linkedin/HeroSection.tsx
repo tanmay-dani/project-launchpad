@@ -93,15 +93,15 @@ const HeroSection = () => {
               </div>
               <div className="w-px h-14 bg-border" />
               <div className="text-center">
-                <p className="text-xs text-primary mb-1">Your Price</p>
-                <p className="text-3xl md:text-4xl font-bold text-gradient">₹399</p>
-                <span className="inline-block mt-1 text-xs font-bold bg-primary/20 text-primary px-2 py-0.5 rounded-full">SAVE 95%</span>
+                <p className="text-xs text-success mb-1">Your Price</p>
+                <p className="text-3xl md:text-4xl font-bold text-success">₹399</p>
+                <span className="inline-block mt-1 text-xs font-bold bg-success/20 text-success px-2 py-0.5 rounded-full">SAVE 95%</span>
               </div>
             </div>
 
             <div className="space-y-2 text-left">
               <div className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-success flex-shrink-0" />
                 <span className="text-sm text-foreground">Activated on <strong>YOUR</strong> personal email</span>
               </div>
               <div className="flex items-center gap-2.5">
