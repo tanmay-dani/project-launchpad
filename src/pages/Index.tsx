@@ -230,7 +230,7 @@ const Index = () => {
                   alt="Trustpilot 4.2 stars"
                   className="h-4"
                 />
-                <span>4.2 out of 5 · 6 reviews on</span>
+                <span>4.2 out of 5 · 7 reviews on</span>
                 <img
                   src={trustpilotLogo}
                   alt="Trustpilot"
