@@ -1,13 +1,15 @@
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import WhatsAppIcon from "../adobe/WhatsAppIcon";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
+import { useActivateModal } from "./ActivateModal";
 
-const WHATSAPP_LINK = "https://wa.me/919040914544?text=Hi%2C%20I%20want%20to%20avail%20LinkedIn%20Premium%20Career%20for%203%20months%20at%20₹399";
+const WHATSAPP_LINK = "https://wa.me/919040914544?text=Hi%2C%20I%20have%20a%20question%20about%20LinkedIn%20Premium%20Career";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { openModal } = useActivateModal();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-lg border-b border-border">
@@ -22,9 +24,7 @@ const Navbar = () => {
             <a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
             <a href="#faq" className="text-sm text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
             <div className="flex items-center gap-2">
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                <Button variant="hero" size="sm">Activate Premium — ₹399</Button>
-              </a>
+              <Button variant="hero" size="sm" onClick={openModal}>Activate Premium — ₹399</Button>
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="sm" className="aspect-square px-0 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                   <WhatsAppIcon className="w-4 h-4" />
@@ -45,9 +45,7 @@ const Navbar = () => {
               <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors" onClick={() => setIsOpen(false)}>Pricing</a>
               <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors" onClick={() => setIsOpen(false)}>FAQ</a>
               <div className="flex items-center gap-2">
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex-1">
-                  <Button variant="hero" size="default" className="w-full">Activate Premium — ₹399</Button>
-                </a>
+                <Button variant="hero" size="default" className="flex-1" onClick={() => { openModal(); setIsOpen(false); }}>Activate Premium — ₹399</Button>
                 <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="default" className="aspect-square px-0 border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => setIsOpen(false)}>
                     <WhatsAppIcon className="w-5 h-5" />
