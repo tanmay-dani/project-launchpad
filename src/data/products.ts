@@ -416,7 +416,7 @@ export const products: Product[] = [
     emoji: "🔥",
     logo: brazzersLogo,
     tagline: "Premium access to one of the world's top adult streaming platforms.",
-    price: "₹399",
+    price: "₹299",
     originalPrice: "₹1,999/mo",
     duration: "1 Month",
     features: [
@@ -434,7 +434,7 @@ export const products: Product[] = [
     emoji: "🔥",
     logo: pornhubLogo,
     tagline: "Premium access to the world's largest adult streaming platform.",
-    price: "₹399",
+    price: "₹299",
     originalPrice: "₹1,999/mo",
     duration: "1 Month",
     features: [
@@ -452,7 +452,7 @@ export const products: Product[] = [
     emoji: "🔥",
     logo: mofosLogo,
     tagline: "Full network access to one of the biggest amateur adult platforms.",
-    price: "₹399",
+    price: "₹299",
     originalPrice: "₹1,999/mo",
     duration: "1 Month",
     features: [
@@ -470,7 +470,7 @@ export const products: Product[] = [
     emoji: "🔥",
     logo: realitykingsLogo,
     tagline: "Premium studio-produced content from the Reality Kings network.",
-    price: "₹399",
+    price: "₹299",
     originalPrice: "₹1,999/mo",
     duration: "1 Month",
     features: [
