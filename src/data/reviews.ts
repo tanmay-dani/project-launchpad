@@ -61,12 +61,12 @@ export const reviews: Review[] = [
     avatar: taraImg,
   },
   {
-    name: "Pawan Kulegi",
+    name: "Rishi Patel",
     rating: 5,
-    date: "Feb 20, 2026",
-    title: "Smooth and fast transaction, highly recommended",
-    text: "Had an amazing experience dealing with ThePremiumNest, I bought Linkedin Premium for 3 months, the seller sent the link first and I paid after I activated the subscription, the transaction was smooth and fast. I am planning to buy more stuff from him soon.",
-    avatar: pawanImg,
+    date: "Feb 24, 2026",
+    title: "I recently purchased a 12-month LinkedIn Career subscription",
+    text: "I recently purchased a 12-month LinkedIn Career subscription from The Premium Nest and had a great experience. The process was smooth, activation was quick, and their communication was clear and professional. Everything was delivered as promised without any issues. Reliable service and competitive pricing make them a trustworthy option for premium digital subscriptions.",
+    avatar: null,
   },
 ];
 
