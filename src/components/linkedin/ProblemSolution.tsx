@@ -1,5 +1,6 @@
-import { X, Check, User, Crown, ArrowDown } from "lucide-react";
+import { X, Check, User, Crown, ArrowDown, Award } from "lucide-react";
 import ScrollReveal from "../adobe/ScrollReveal";
+import linkedinPremiumGold from "@/assets/linkedin-premium-gold.png";
 
 const painPoints = [
   { pain: "Applied to 200+ jobs", result: "0 callbacks" },
@@ -71,33 +72,33 @@ const ProblemSolution = () => {
 
           {/* WITH — Dream Outcome Column */}
           <ScrollReveal direction="right">
-            <div className="bg-gradient-card rounded-2xl p-6 md:p-8 border-2 border-success/40 h-full relative overflow-hidden shadow-glow">
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-success/10 rounded-full blur-3xl" />
-              <div className="absolute top-3 right-3 bg-success text-success-foreground text-[10px] font-bold px-2.5 py-1 rounded-full">
+            <div className="bg-gradient-card rounded-2xl p-6 md:p-8 h-full relative overflow-hidden" style={{ borderWidth: 2, borderColor: 'hsl(42 80% 55% / 0.5)', boxShadow: '0 0 60px -10px hsl(42 80% 55% / 0.3)' }}>
+              <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full blur-3xl" style={{ backgroundColor: 'hsl(42 80% 55% / 0.1)' }} />
+              <div className="absolute top-3 right-3 text-[10px] font-bold px-2.5 py-1 rounded-full" style={{ backgroundColor: 'hsl(42 80% 55%)', color: 'hsl(42 90% 15%)' }}>
                 YOU IN 24 HOURS
               </div>
               <div className="relative">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-full bg-success/15 flex items-center justify-center">
-                    <Crown className="w-6 h-6 text-success" />
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden" style={{ backgroundColor: 'hsl(42 80% 55% / 0.15)' }}>
+                    <img src={linkedinPremiumGold} alt="LinkedIn Premium" className="w-8 h-8 object-contain" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-foreground">You With Premium</h3>
-                    <p className="text-xs text-success font-medium">After Activation</p>
+                    <h3 className="text-lg font-bold text-foreground">The Premium Candidate</h3>
+                    <p className="text-xs font-medium" style={{ color: 'hsl(42 80% 55%)' }}>With LinkedIn Premium Career</p>
                   </div>
                 </div>
                 <div className="space-y-4">
                   {transformations.map((trait, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-full bg-success/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="w-3 h-3 text-success" />
+                      <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ backgroundColor: 'hsl(42 80% 55% / 0.2)' }}>
+                        <Check className="w-3 h-3" style={{ color: 'hsl(42 80% 55%)' }} />
                       </div>
                       <span className="text-sm text-foreground">{trait}</span>
                     </div>
                   ))}
                 </div>
-                <div className="mt-6 bg-success/10 rounded-lg p-3 text-center">
-                  <p className="text-sm text-success font-semibold">🚀 Interview calls within 2 weeks. Guaranteed.</p>
+                <div className="mt-6 rounded-lg p-3 text-center" style={{ backgroundColor: 'hsl(42 80% 55% / 0.1)' }}>
+                  <p className="text-sm font-semibold" style={{ color: 'hsl(42 80% 55%)' }}>🚀 Interview calls within 2 weeks. Guaranteed.</p>
                 </div>
               </div>
             </div>
