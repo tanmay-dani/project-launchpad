@@ -60,5 +60,13 @@ export const reviews: Review[] = [
     text: "I am a 3rd year student at Christ and was applying to internships. He provided the link before and took the payment after activation. I have recommended this site to my friends who are starting their job search journey.",
     avatar: taraImg,
   },
+  {
+    name: "Pawan Kulegi",
+    rating: 5,
+    date: "Feb 20, 2026",
+    title: "Smooth and fast transaction, highly recommended",
+    text: "Had an amazing experience dealing with ThePremiumNest, I bought Linkedin Premium for 3 months, the seller sent the link first and I paid after I activated the subscription, the transaction was smooth and fast. I am planning to buy more stuff from him soon.",
+    avatar: pawanImg,
+  },
 ];
 
