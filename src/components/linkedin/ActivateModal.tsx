@@ -76,7 +76,7 @@ export const ActivateModalProvider = ({ children }: { children: ReactNode }) => 
                   className="w-full shadow-glow group"
                   onClick={() => setStep("form")}
                 >
-                  Yes — Let's Activate
+                  Yes, Let's Activate
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button
