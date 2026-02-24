@@ -44,6 +44,7 @@ export function ProductCard({ product, index, id }: { product: Product; index: n
           <img
             src={product.logo}
             alt={`${product.name} logo`}
+            loading="lazy"
             className={`rounded-lg object-contain ${
               product.name === "Pornhub Premium" || product.name === "Brazzers Premium"
                 ? "h-[58px] w-[58px]"

@@ -1,18 +1,20 @@
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { usePageTracking } from "./hooks/usePageTracking";
-import Index from "./pages/Index";
-import Catalog from "./pages/Catalog";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import RefundPolicy from "./pages/RefundPolicy";
-import TermsOfService from "./pages/TermsOfService";
-import NotFound from "./pages/NotFound";
-import AdobeLanding from "./pages/AdobeLanding";
-import LinkedInLanding from "./pages/LinkedInLanding";
-import ThankYou from "./pages/ThankYou";
+
+const Index = lazy(() => import("./pages/Index"));
+const Catalog = lazy(() => import("./pages/Catalog"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const AdobeLanding = lazy(() => import("./pages/AdobeLanding"));
+const LinkedInLanding = lazy(() => import("./pages/LinkedInLanding"));
+const ThankYou = lazy(() => import("./pages/ThankYou"));
 
 const queryClient = new QueryClient();
 
@@ -28,6 +30,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <PageTracker>
+        <Suspense fallback={<div className="min-h-screen bg-background" />}>
         <Routes>
           <Route path="/" element={<Index />} />
            <Route path="/adobe" element={<AdobeLanding />} />
@@ -40,6 +43,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </Suspense>
         </PageTracker>
       </BrowserRouter>
     </TooltipProvider>

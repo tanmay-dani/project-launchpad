@@ -26,6 +26,7 @@ export function LogoBanner({ onProductClick }: { onProductClick?: (id: number) =
             <img
               src={item.logo}
               alt={item.name}
+              loading="lazy"
               className="h-12 w-12 shrink-0 object-contain opacity-60 grayscale transition hover:opacity-100 hover:grayscale-0"
             />
           </button>
