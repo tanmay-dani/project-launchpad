@@ -30,7 +30,30 @@ export const ActivateModalProvider = ({ children }: { children: ReactNode }) => 
     setOpen(true);
   };
 
-  const validateAndSubmit = () => {
+  const GOOGLE_SHEET_WEBHOOK = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE";
+
+  const submitLead = async (trimmedName: string, trimmedEmail: string) => {
+    try {
+      if (GOOGLE_SHEET_WEBHOOK.startsWith("http")) {
+        await fetch(GOOGLE_SHEET_WEBHOOK, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: trimmedName,
+            email: trimmedEmail,
+            source: "linkedin-premium",
+            timestamp: new Date().toISOString(),
+          }),
+        });
+      }
+    } catch (e) {
+      // Don't block the WhatsApp redirect if sheet fails
+      console.error("Sheet submission failed:", e);
+    }
+  };
+
+  const validateAndSubmit = async () => {
     const newErrors: { name?: string; email?: string } = {};
     const trimmedName = name.trim();
     const trimmedEmail = email.trim();
@@ -46,6 +69,9 @@ export const ActivateModalProvider = ({ children }: { children: ReactNode }) => 
       setErrors(newErrors);
       return;
     }
+
+    // Send to Google Sheet (non-blocking)
+    submitLead(trimmedName, trimmedEmail);
 
     const message = encodeURIComponent(
       `Hi, I want to activate LinkedIn Premium Career (3 months) for ₹399.\n\nName: ${trimmedName}\nLinkedIn Email: ${trimmedEmail}\n\n(Pay after activation)`
