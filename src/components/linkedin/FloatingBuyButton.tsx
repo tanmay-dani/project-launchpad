@@ -32,25 +32,25 @@ const FloatingBuyButton = () => {
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
-      className="fixed bottom-0 left-0 right-0 z-50 p-3 bg-black"
+      className="fixed bottom-0 left-0 right-0 z-50 p-3 bg-background/95 backdrop-blur-md border-t border-border"
     >
       <div className="flex gap-2 md:gap-3 max-w-md mx-auto items-center">
-        <div className="hidden md:flex items-center gap-2 bg-white/10 border border-white/20 rounded-lg px-2 py-1.5 text-white">
-          <Clock className="w-3 h-3 animate-pulse" />
+        <div className="hidden md:flex items-center gap-2 bg-secondary border border-border rounded-lg px-2 py-1.5 text-foreground">
+          <Clock className="w-3 h-3 text-destructive animate-pulse" />
           <span className="font-mono font-bold text-xs">
             {formatTime(timeLeft.hours)}:{formatTime(timeLeft.minutes)}:{formatTime(timeLeft.seconds)}
           </span>
         </div>
         <Button variant="hero" size="lg" className="flex-1 shadow-glow" onClick={openModal}>
-          Activate Premium · Pay After ₹399
+          Activate Premium · ₹399
         </Button>
         <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
-          <Button variant="outline" size="lg" className="aspect-square px-0 h-12 w-12 border-success text-success hover:bg-success hover:text-success-foreground">
+          <Button variant="outline" size="lg" className="aspect-square px-0 h-12 w-12 border-check text-check hover:bg-check hover:text-check-foreground">
             <WhatsAppIcon className="w-6 h-6" />
           </Button>
         </a>
       </div>
-      <p className="text-xs text-center text-white/70 mt-1.5">🔒 Pay only after activation · Limited vouchers left</p>
+      <p className="text-xs text-center text-muted-foreground mt-1.5">Pay only after activation · Limited vouchers left</p>
     </motion.div>
   );
 };

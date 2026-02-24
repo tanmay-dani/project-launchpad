@@ -1,4 +1,4 @@
-import { X, Check, User, Crown, ArrowDown, Award } from "lucide-react";
+import { X, Check, User, Crown, ArrowDown } from "lucide-react";
 import ScrollReveal from "../adobe/ScrollReveal";
 import linkedinPremiumGold from "@/assets/linkedin-premium-gold.png";
 
@@ -22,15 +22,14 @@ const ProblemSolution = () => {
   return (
     <section className="py-20 px-4">
       <div className="container max-w-5xl mx-auto">
-        {/* Agitate the Pain */}
         <ScrollReveal>
           <div className="text-center mb-12">
-            <p className="text-sm font-semibold text-destructive uppercase tracking-widest mb-3">The Painful Truth</p>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            <p className="text-sm font-medium text-destructive/80 uppercase tracking-widest mb-3">The Painful Truth</p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
               This Is Why You're <span className="text-destructive">Not Getting Hired</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              It's not your skills. It's not your experience. It's that <span className="text-foreground font-semibold">recruiters literally can't see you.</span>
+              It's not your skills. It's not your experience. It's that <span className="text-foreground font-medium">recruiters literally can't see you.</span>
             </p>
           </div>
         </ScrollReveal>
@@ -38,7 +37,7 @@ const ProblemSolution = () => {
         <div className="grid md:grid-cols-2 gap-4 md:gap-8">
           {/* WITHOUT — Pain Column */}
           <ScrollReveal direction="left">
-            <div className="bg-gradient-card rounded-2xl p-6 md:p-8 border border-destructive/20 h-full relative overflow-hidden">
+            <div className="bg-gradient-card rounded-2xl p-6 md:p-8 border border-destructive/15 h-full relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-destructive/5 rounded-full blur-3xl" />
               <div className="relative">
                 <div className="flex items-center gap-3 mb-6">
@@ -47,70 +46,69 @@ const ProblemSolution = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-foreground">You Right Now</h3>
-                    <p className="text-xs text-destructive font-medium">Without Premium</p>
+                    <p className="text-xs text-destructive/80 font-medium">Without Premium</p>
                   </div>
                 </div>
                 <div className="space-y-4">
                   {painPoints.map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-full bg-destructive/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <X className="w-3 h-3 text-destructive" />
+                      <div className="w-5 h-5 rounded-full bg-destructive/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <X className="w-3 h-3 text-destructive/70" />
                       </div>
                       <div>
-                        <span className="text-sm text-foreground">{item.pain}</span>
-                        <span className="text-sm text-destructive font-medium"> → {item.result}</span>
+                        <span className="text-sm text-foreground/70">{item.pain}</span>
+                        <span className="text-sm text-destructive/80 font-medium"> → {item.result}</span>
                       </div>
                     </div>
                   ))}
                 </div>
-                <div className="mt-6 bg-destructive/10 rounded-lg p-3 text-center">
-                  <p className="text-sm text-destructive font-semibold">😞 Months of frustration. Zero progress.</p>
+                <div className="mt-6 bg-destructive/8 rounded-lg p-3 text-center">
+                  <p className="text-sm text-muted-foreground">Months of frustration. Zero progress.</p>
                 </div>
               </div>
             </div>
           </ScrollReveal>
 
-          {/* WITH — Dream Outcome Column */}
+          {/* WITH — Premium Gold Column */}
           <ScrollReveal direction="right">
-            <div className="bg-gradient-card rounded-2xl p-6 md:p-8 h-full relative overflow-hidden" style={{ borderWidth: 2, borderColor: 'hsl(42 80% 55% / 0.5)', boxShadow: '0 0 60px -10px hsl(42 80% 55% / 0.3)' }}>
-              <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full blur-3xl" style={{ backgroundColor: 'hsl(42 80% 55% / 0.1)' }} />
-              <div className="absolute top-3 right-3 text-[10px] font-bold px-2.5 py-1 rounded-full" style={{ backgroundColor: 'hsl(42 80% 55%)', color: 'hsl(42 90% 15%)' }}>
+            <div className="bg-gradient-card rounded-2xl p-6 md:p-8 h-full relative overflow-hidden border border-premium-gold/25" style={{ boxShadow: '0 0 50px -15px hsl(42 75% 55% / 0.15)' }}>
+              <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full blur-3xl bg-premium-gold/5" />
+              <div className="absolute top-3 right-3 text-[10px] font-bold px-2.5 py-1 rounded-full bg-premium-gold text-premium-gold-foreground">
                 YOU IN 24 HOURS
               </div>
               <div className="relative">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden" style={{ backgroundColor: 'hsl(42 80% 55% / 0.15)' }}>
+                  <div className="w-12 h-12 rounded-full bg-premium-gold/10 flex items-center justify-center overflow-hidden">
                     <img src={linkedinPremiumGold} alt="LinkedIn Premium" className="w-8 h-8 object-contain" />
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-foreground">The Premium Candidate</h3>
-                    <p className="text-xs font-medium" style={{ color: 'hsl(42 80% 55%)' }}>With LinkedIn Premium Career</p>
+                    <p className="text-xs font-medium text-premium-gold">With LinkedIn Premium Career</p>
                   </div>
                 </div>
                 <div className="space-y-4">
                   {transformations.map((trait, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ backgroundColor: 'hsl(42 80% 55% / 0.2)' }}>
-                        <Check className="w-3 h-3" style={{ color: 'hsl(42 80% 55%)' }} />
+                      <div className="w-5 h-5 rounded-full bg-check/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-3 h-3 text-check" />
                       </div>
-                      <span className="text-sm text-foreground">{trait}</span>
+                      <span className="text-sm text-foreground/85">{trait}</span>
                     </div>
                   ))}
                 </div>
-                <div className="mt-6 rounded-lg p-3 text-center" style={{ backgroundColor: 'hsl(42 80% 55% / 0.1)' }}>
-                  <p className="text-sm font-semibold" style={{ color: 'hsl(42 80% 55%)' }}>🚀 Interview calls within 2 weeks. Guaranteed.</p>
+                <div className="mt-6 rounded-lg p-3 text-center bg-premium-gold/8">
+                  <p className="text-sm font-medium text-premium-gold">Interview calls within 2 weeks. Guaranteed.</p>
                 </div>
               </div>
             </div>
           </ScrollReveal>
         </div>
 
-        {/* Bridge — Effort Reduction */}
         <ScrollReveal delay={0.2}>
           <div className="mt-10 text-center">
-            <ArrowDown className="w-6 h-6 text-success mx-auto mb-3 animate-bounce" />
+            <ArrowDown className="w-6 h-6 text-muted-foreground mx-auto mb-3 animate-bounce" />
             <p className="text-lg text-muted-foreground">
-              The difference? <span className="text-success font-bold">₹399 and 2 minutes.</span>
+              The difference? <span className="text-foreground font-semibold">₹399</span> and <span className="text-foreground font-semibold">2 minutes.</span>
             </p>
           </div>
         </ScrollReveal>

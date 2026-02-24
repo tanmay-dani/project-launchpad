@@ -55,9 +55,9 @@ const FAQ = () => {
       <div className="container max-w-3xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-success uppercase tracking-widest mb-3">Still Have Questions?</p>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
-              We'll Answer <span className="text-success">Everything</span>
+            <p className="text-sm font-medium text-primary uppercase tracking-widest mb-3">Still Have Questions?</p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
+              We'll Answer <span className="text-foreground">Everything</span>
             </h2>
             <p className="text-muted-foreground text-lg">
               If your question isn't here, WhatsApp us — we reply in minutes, not days.
@@ -70,7 +70,7 @@ const FAQ = () => {
             <ScrollReveal key={index} delay={index * 0.08}>
               <AccordionItem
                 value={`item-${index}`}
-                className="bg-gradient-card rounded-xl border border-border px-6 data-[state=open]:border-success/40 transition-colors"
+                className="bg-gradient-card rounded-xl border border-border px-6 data-[state=open]:border-primary/30 transition-colors"
               >
                 <AccordionTrigger className="text-left hover:no-underline py-6 text-foreground font-medium">
                   {faq.question}
