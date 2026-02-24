@@ -1,4 +1,4 @@
-import { Clock, ArrowRight } from "lucide-react";
+import { Clock } from "lucide-react";
 import WhatsAppIcon from "../adobe/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -41,7 +41,7 @@ const FloatingBuyButton = () => {
         </div>
         <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex-1">
           <Button variant="hero" size="lg" className="w-full">
-            Buy Now — ₹399
+            Activate Premium Now — Pay Later
           </Button>
         </a>
         <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
@@ -50,7 +50,7 @@ const FloatingBuyButton = () => {
           </Button>
         </a>
       </div>
-      <p className="text-xs text-center text-white/70 mt-1.5">💼 Limited offer • Pay after activation</p>
+      <p className="text-xs text-center text-white/70 mt-1.5">🔒 Pay only after activation • Limited vouchers left</p>
     </motion.div>
   );
 };

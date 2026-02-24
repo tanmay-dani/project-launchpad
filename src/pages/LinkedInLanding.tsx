@@ -1,8 +1,10 @@
 import Navbar from "@/components/linkedin/Navbar";
 import HeroSection from "@/components/linkedin/HeroSection";
+import ValueStack from "@/components/linkedin/ValueStack";
+import ProblemSolution from "@/components/linkedin/ProblemSolution";
+import ScarcityExplainer from "@/components/linkedin/ScarcityExplainer";
 import TrustpilotReviews from "@/components/adobe/TrustpilotReviews";
-import WhatsIncluded from "@/components/linkedin/WhatsIncluded";
-import PricingComparison from "@/components/linkedin/PricingComparison";
+import GuaranteeSection from "@/components/linkedin/GuaranteeSection";
 import FAQ from "@/components/linkedin/FAQ";
 import CTASection from "@/components/linkedin/CTASection";
 import Footer from "@/components/linkedin/Footer";
@@ -14,9 +16,11 @@ const LinkedInLanding = () => {
       <Navbar />
       <main className="pb-28">
         <HeroSection />
+        <ValueStack />
+        <ProblemSolution />
+        <ScarcityExplainer />
         <TrustpilotReviews />
-        <WhatsIncluded />
-        <PricingComparison />
+        <GuaranteeSection />
         <FAQ />
         <CTASection />
       </main>

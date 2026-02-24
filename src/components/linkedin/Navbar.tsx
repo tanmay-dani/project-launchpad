@@ -23,7 +23,7 @@ const Navbar = () => {
             <a href="#faq" className="text-sm text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
             <div className="flex items-center gap-2">
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                <Button variant="hero" size="sm">Buy Now — ₹399</Button>
+                <Button variant="hero" size="sm">Activate Premium — ₹399</Button>
               </a>
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="sm" className="aspect-square px-0 border-green-500 text-green-500 hover:bg-green-500 hover:text-white">
@@ -46,7 +46,7 @@ const Navbar = () => {
               <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors" onClick={() => setIsOpen(false)}>FAQ</a>
               <div className="flex items-center gap-2">
                 <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex-1">
-                  <Button variant="hero" size="default" className="w-full">Buy Now — ₹399</Button>
+                  <Button variant="hero" size="default" className="w-full">Activate Premium — ₹399</Button>
                 </a>
                 <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="default" className="aspect-square px-0 border-green-500 text-green-500 hover:bg-green-500 hover:text-white" onClick={() => setIsOpen(false)}>
