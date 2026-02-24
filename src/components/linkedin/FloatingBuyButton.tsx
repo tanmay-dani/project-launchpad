@@ -42,7 +42,7 @@ const FloatingBuyButton = () => {
           </span>
         </div>
         <Button variant="hero" size="lg" className="flex-1 shadow-glow" onClick={openModal}>
-          Activate Premium — Pay After ₹399
+          Activate Premium · Pay After ₹399
         </Button>
         <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
           <Button variant="outline" size="lg" className="aspect-square px-0 h-12 w-12 border-success text-success hover:bg-success hover:text-success-foreground">
@@ -50,7 +50,7 @@ const FloatingBuyButton = () => {
           </Button>
         </a>
       </div>
-      <p className="text-xs text-center text-white/70 mt-1.5">🔒 Pay only after activation • Limited vouchers left</p>
+      <p className="text-xs text-center text-white/70 mt-1.5">🔒 Pay only after activation · Limited vouchers left</p>
     </motion.div>
   );
 };
