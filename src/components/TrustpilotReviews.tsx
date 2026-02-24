@@ -2,20 +2,31 @@ import { reviews } from "@/data/reviews";
 import trustpilotStars from "@/assets/trustpilot-stars-4.svg";
 import trustpilotLogo from "@/assets/trustpilot-logo.svg";
 
-const TrustpilotStar = ({ filled }: { filled: boolean }) => (
-  <svg viewBox="0 0 24 24" className="h-5 w-5" xmlns="http://www.w3.org/2000/svg">
-    <rect width="24" height="24" rx="1.5" fill={filled ? "#00b67a" : "#dcdce6"} />
-    <path
-      d="M12 4.5l2.39 4.84 5.34.78-3.87 3.77.91 5.33L12 16.77l-4.77 2.45.91-5.33-3.87-3.77 5.34-.78L12 4.5z"
-      fill="white"
-    />
-  </svg>
+
+// Single Trustpilot star matching their exact brand style
+const TPStar = ({ filled }: { filled: boolean }) => (
+  <div
+    className="inline-flex items-center justify-center"
+    style={{
+      width: 22,
+      height: 22,
+      backgroundColor: filled ? '#00b67a' : '#dcdce6',
+      borderRadius: 2,
+    }}
+  >
+    <svg width="14" height="14" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M12.5 0L15.65 8.74H25L17.17 14.14L20.33 22.88L12.5 17.48L4.67 22.88L7.83 14.14L0 8.74H9.35L12.5 0Z"
+        fill="white"
+      />
+    </svg>
+  </div>
 );
 
 const StarRating = ({ rating }: { rating: number }) => (
   <div className="flex gap-0.5">
     {Array.from({ length: 5 }).map((_, i) => (
-      <TrustpilotStar key={i} filled={i < rating} />
+      <TPStar key={i} filled={i < rating} />
     ))}
   </div>
 );
