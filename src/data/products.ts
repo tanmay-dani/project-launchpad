@@ -43,6 +43,7 @@ import brazzersLogo from "@/assets/logos/brazzers.png";
 import pornhubLogo from "@/assets/logos/pornhub.png";
 import mofosLogo from "@/assets/logos/mofos.png";
 import realitykingsLogo from "@/assets/logos/realitykings.png";
+import myfitnesspalLogo from "@/assets/logos/myfitnesspal.png";
 
 export const products: Product[] = [
   {
@@ -481,5 +482,23 @@ export const products: Product[] = [
       "Advanced search, filters & cross-device support",
     ],
     category: "adult",
+  },
+  {
+    id: 25,
+    name: "MyFitnessPal Premium",
+    emoji: "🍎",
+    logo: myfitnesspalLogo,
+    tagline: "The world's #1 calorie counter and nutrition tracker.",
+    price: "₹1,000",
+    originalPrice: "₹4,999/yr",
+    duration: "1 Year",
+    features: [
+      "Full 12-month Premium access",
+      "Ad-free food logging & barcode scanner",
+      "Detailed macro & micronutrient breakdowns",
+      "Custom meal plans & calorie goals",
+      "Advanced insights and progress analytics",
+    ],
+    category: "wellness",
   },
 ];
