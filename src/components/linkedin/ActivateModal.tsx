@@ -20,19 +20,21 @@ export const ActivateModalProvider = ({ children }: { children: ReactNode }) => 
   const [step, setStep] = useState<"confirm" | "form">("confirm");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [errors, setErrors] = useState<{ name?: string; email?: string }>({});
+  const [whatsapp, setWhatsapp] = useState("");
+  const [errors, setErrors] = useState<{ name?: string; email?: string; whatsapp?: string }>({});
 
   const openModal = () => {
     setStep("confirm");
     setName("");
     setEmail("");
+    setWhatsapp("");
     setErrors({});
     setOpen(true);
   };
 
   const GOOGLE_SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbyWB7_EbammPb5_OX4NNgnzbv1rpOOGgM8dQdj1rAyBDhRjvl8jsGlytsks2acsQimhxA/exec";
 
-  const submitLead = async (trimmedName: string, trimmedEmail: string) => {
+  const submitLead = async (trimmedName: string, trimmedEmail: string, trimmedWhatsapp: string) => {
     try {
       if (GOOGLE_SHEET_WEBHOOK.startsWith("http")) {
         await fetch(GOOGLE_SHEET_WEBHOOK, {
@@ -42,27 +44,31 @@ export const ActivateModalProvider = ({ children }: { children: ReactNode }) => 
           body: JSON.stringify({
             name: trimmedName,
             email: trimmedEmail,
+            whatsapp: trimmedWhatsapp,
             source: "linkedin-premium",
             timestamp: new Date().toISOString(),
           }),
         });
       }
     } catch (e) {
-      // Don't block the WhatsApp redirect if sheet fails
       console.error("Sheet submission failed:", e);
     }
   };
 
   const validateAndSubmit = async () => {
-    const newErrors: { name?: string; email?: string } = {};
+    const newErrors: { name?: string; email?: string; whatsapp?: string } = {};
     const trimmedName = name.trim();
     const trimmedEmail = email.trim();
+    const trimmedWhatsapp = whatsapp.trim().replace(/\s/g, "");
 
     if (!trimmedName || trimmedName.length < 2) {
       newErrors.name = "Please enter your name";
     }
     if (!trimmedEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail)) {
       newErrors.email = "Please enter a valid email";
+    }
+    if (!trimmedWhatsapp || !/^[6-9]\d{9}$/.test(trimmedWhatsapp)) {
+      newErrors.whatsapp = "Please enter a valid 10-digit number";
     }
 
     if (Object.keys(newErrors).length > 0) {
@@ -71,10 +77,10 @@ export const ActivateModalProvider = ({ children }: { children: ReactNode }) => 
     }
 
     // Send to Google Sheet (non-blocking)
-    submitLead(trimmedName, trimmedEmail);
+    submitLead(trimmedName, trimmedEmail, trimmedWhatsapp);
 
     const message = encodeURIComponent(
-      `Hi, I want to activate LinkedIn Premium Career (3 months) for ₹399.\n\nName: ${trimmedName}\nLinkedIn Email: ${trimmedEmail}\n\n(Pay after activation)`
+      `Hi, I want to activate LinkedIn Premium Career (3 months) for ₹399.\n\nName: ${trimmedName}\nLinkedIn Email: ${trimmedEmail}\nWhatsApp: ${trimmedWhatsapp}\n\n(Pay after activation)`
     );
     window.open(`https://wa.me/919040914544?text=${message}`, "_blank");
     setOpen(false);
@@ -163,6 +169,22 @@ export const ActivateModalProvider = ({ children }: { children: ReactNode }) => 
                   <p className="text-xs text-muted-foreground mt-1">
                     The email you use to login to LinkedIn
                   </p>
+                </div>
+
+                <div>
+                  <Label htmlFor="activate-whatsapp" className="text-sm font-medium text-foreground">
+                    WhatsApp Number
+                  </Label>
+                  <Input
+                    id="activate-whatsapp"
+                    type="tel"
+                    placeholder="e.g. 9876543210"
+                    value={whatsapp}
+                    onChange={(e) => { setWhatsapp(e.target.value.replace(/\D/g, "")); setErrors(prev => ({ ...prev, whatsapp: undefined })); }}
+                    className="mt-1.5 bg-secondary border-border"
+                    maxLength={10}
+                  />
+                  {errors.whatsapp && <p className="text-xs text-destructive mt-1">{errors.whatsapp}</p>}
                 </div>
 
                 <Button
