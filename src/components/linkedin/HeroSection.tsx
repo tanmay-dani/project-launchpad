@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Zap, Clock, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Shield, Zap, Clock, CheckCircle2, Users, TrendingUp } from "lucide-react";
 import WhatsAppIcon from "../adobe/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 import linkedinLogo from "@/assets/logos/linkedin.png";
@@ -40,12 +40,13 @@ const HeroSection = () => {
           transition={{ duration: 1.2, delay: 0.2 }}
           className="absolute inset-0 flex items-center justify-center pointer-events-none"
         >
-          <img src={linkedinLogo} alt="" className="w-[400px] md:w-[600px] lg:w-[700px] opacity-[0.06] select-none" aria-hidden="true" />
+          <img src={linkedinLogo} alt="" className="w-[400px] md:w-[600px] lg:w-[700px] opacity-[0.04] select-none" aria-hidden="true" />
         </motion.div>
       </div>
 
       <div className="container max-w-5xl mx-auto relative z-10">
         <div className="text-center">
+          {/* Urgency Banner */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -54,10 +55,11 @@ const HeroSection = () => {
           >
             <span className="w-2 h-2 bg-destructive rounded-full animate-pulse" />
             <span className="text-sm font-semibold tracking-wide text-destructive">
-              ⚠️ Only {vouchersLeft} Vouchers Left for February
+              ⚠️ Only {vouchersLeft} Vouchers Left This Month
             </span>
           </motion.div>
 
+          {/* LinkedIn Logo */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -67,44 +69,68 @@ const HeroSection = () => {
             <img src={linkedinLogo} alt="LinkedIn" className="h-12 md:h-14 w-auto" />
           </motion.div>
 
+          {/* DREAM OUTCOME Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-5 leading-tight"
           >
-            3 Months LinkedIn Premium
+            Land Your Dream Job
             <br />
-            <span className="text-success font-extrabold">for just ₹399</span>
-            <br />
-            <span className="text-foreground text-3xl md:text-4xl lg:text-5xl">Pay After Activation</span>
+            <span className="text-success">3x Faster</span> with Premium
           </motion.h1>
 
+          {/* Subheadline — Perceived Likelihood + Effort Reduction */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8"
           >
-            Official plan. <span className="text-foreground font-medium">Your own email.</span> InMail credits, Gold Badge, 21,000+ courses.
+            Get <span className="text-foreground font-semibold">3 months of LinkedIn Premium Career</span> on your own email for just <span className="text-success font-bold">₹399</span> instead of ₹7,500.
             <br className="hidden md:block" />
-            <span className="text-primary font-bold">We activate first. You pay only after you see it working.</span>
+            <span className="text-success font-bold">We activate first. You pay only after you see it working.</span>
           </motion.p>
 
+          {/* Social Proof Bar */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.25 }}
+            className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mb-8"
+          >
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <Users className="w-4 h-4 text-success" />
+              <span><span className="text-foreground font-semibold">2,400+</span> professionals activated</span>
+            </div>
+            <div className="hidden md:block w-px h-4 bg-border" />
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <TrendingUp className="w-4 h-4 text-success" />
+              <span><span className="text-foreground font-semibold">94%</span> see results in 2 weeks</span>
+            </div>
+            <div className="hidden md:block w-px h-4 bg-border" />
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <Shield className="w-4 h-4 text-success" />
+              <span className="text-foreground font-semibold">Zero Risk</span> guarantee
+            </div>
+          </motion.div>
+
+          {/* Pricing Card — Anchoring */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="bg-gradient-card rounded-2xl border border-primary/30 p-6 md:p-8 max-w-lg mx-auto mb-8 shadow-glow"
+            className="bg-gradient-card rounded-2xl border border-success/30 p-6 md:p-8 max-w-lg mx-auto mb-8 shadow-glow"
           >
             <div className="flex items-center justify-center gap-6 mb-5">
               <div className="text-center">
-                <p className="text-xs text-muted-foreground mb-1">Official Price</p>
+                <p className="text-xs text-muted-foreground mb-1">LinkedIn Charges</p>
                 <p className="text-2xl md:text-3xl font-bold text-muted-foreground line-through">₹7,500</p>
               </div>
               <div className="w-px h-14 bg-border" />
               <div className="text-center">
-                <p className="text-xs text-success mb-1">Your Price</p>
+                <p className="text-xs text-success mb-1 font-semibold">You Pay Today</p>
                 <p className="text-3xl md:text-4xl font-bold text-success">₹399</p>
                 <span className="inline-block mt-1 text-xs font-bold bg-success/20 text-success px-2 py-0.5 rounded-full">SAVE 95%</span>
               </div>
@@ -113,19 +139,20 @@ const HeroSection = () => {
             <div className="space-y-2 text-left">
               <div className="flex items-center gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-success flex-shrink-0" />
-                <span className="text-sm text-foreground">Activated on <strong>YOUR</strong> personal email</span>
+                <span className="text-sm text-foreground">Full 3-month plan on <strong>YOUR</strong> personal email</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Shield className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="text-sm text-foreground font-semibold">🔒 PAY ONLY AFTER IT WORKS</span>
+                <Shield className="w-4 h-4 text-success flex-shrink-0" />
+                <span className="text-sm text-foreground font-semibold">🔒 PAY ONLY AFTER ACTIVATION — ZERO RISK</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Zap className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">No login details required. 100% Safe.</span>
+                <Zap className="w-4 h-4 text-success flex-shrink-0" />
+                <span className="text-sm text-muted-foreground">No password needed. 2-minute setup. 100% safe.</span>
               </div>
             </div>
           </motion.div>
 
+          {/* CTA — Speed + Effort Reduction */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -133,25 +160,18 @@ const HeroSection = () => {
             className="flex flex-col items-center gap-3 mb-6"
           >
             <Button variant="hero" size="xl" className="group shadow-glow text-base md:text-lg" onClick={openModal}>
-              <span className="hidden sm:inline">Activate My Premium (Pay After Activation)</span>
-              <span className="sm:hidden">Activate Premium · Pay Later</span>
+              <span className="hidden sm:inline">Yes, Activate My Premium Now</span>
+              <span className="sm:hidden">Activate Premium Now</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
+            <p className="text-xs text-success font-medium">⚡ Takes 2 minutes · Pay only after you see the Gold Badge</p>
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
               <WhatsAppIcon className="w-4 h-4" />
-              Have questions? Chat with a human
+              Have doubts? Chat with us first
             </a>
           </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="text-xs text-muted-foreground mb-12"
-          >
-            No password needed · Instant activation · 2,400+ customers served
-          </motion.p>
-
+          {/* Trust Pillars */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -160,21 +180,21 @@ const HeroSection = () => {
           >
             <div className="flex flex-col items-center gap-2">
               <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
-                <Shield className="w-5 h-5 text-trust" />
+                <Shield className="w-5 h-5 text-success" />
               </div>
               <p className="text-xs text-muted-foreground">Your Own Email</p>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
-                <Zap className="w-5 h-5 text-primary" />
+                <Zap className="w-5 h-5 text-success" />
               </div>
               <p className="text-xs text-muted-foreground">Instant Activation</p>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
-                <Clock className="w-5 h-5 text-primary" />
+                <Clock className="w-5 h-5 text-success" />
               </div>
-              <p className="text-xs text-primary font-semibold">Pay After Activation</p>
+              <p className="text-xs text-success font-semibold">Pay After Proof</p>
             </div>
           </motion.div>
         </div>

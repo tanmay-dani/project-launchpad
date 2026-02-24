@@ -1,28 +1,33 @@
-import { Check } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 import ScrollReveal from "../adobe/ScrollReveal";
+import { Button } from "@/components/ui/button";
+import { useActivateModal } from "./ActivateModal";
+
+const features = [
+  { name: "5 InMail Credits/Month" },
+  { name: "Who Viewed Your Profile (365 Days)" },
+  { name: "21,000+ LinkedIn Learning Courses" },
+  { name: "AI Resume & Profile Tools" },
+  { name: "Applicant Insights" },
+  { name: "Top Applicant Gold Badge" },
+  { name: "Company Insights" },
+  { name: "Interview Prep Tools" },
+];
 
 const PricingComparison = () => {
-  const features = [
-    { name: "5 InMail Credits/Month" },
-    { name: "Who Viewed Your Profile (365 Days)" },
-    { name: "21,000+ LinkedIn Learning Courses" },
-    { name: "AI Resume & Profile Tools" },
-    { name: "Applicant Insights" },
-    { name: "Top Applicant Badge" },
-    { name: "Company Insights" },
-    { name: "Interview Prep Tools" },
-  ];
+  const { openModal } = useActivateModal();
 
   return (
     <section id="pricing" className="py-20 px-4">
       <div className="container max-w-5xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-10 md:mb-16">
+            <p className="text-sm font-semibold text-success uppercase tracking-widest mb-3">The Math Doesn't Lie</p>
             <h2 className="text-3xl md:text-5xl font-bold mb-4">
-              Unbeatable <span className="text-gradient">Value</span>
+              Same Premium. <span className="text-success">95% Less.</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Compare our price with LinkedIn's official Premium Career pricing
+              Exact same features. Exact same plan. Just a <span className="text-foreground font-semibold">radically better price.</span>
             </p>
           </div>
         </ScrollReveal>
@@ -32,7 +37,7 @@ const PricingComparison = () => {
           <ScrollReveal direction="left">
             <div className="bg-gradient-card rounded-xl p-4 border border-border relative overflow-hidden h-full">
               <div className="relative">
-                <p className="text-xs text-muted-foreground mb-1">Official</p>
+                <p className="text-xs text-muted-foreground mb-1">LinkedIn Charges</p>
                 <p className="text-2xl font-bold text-muted-foreground line-through">₹7,500</p>
                 <p className="text-xs text-muted-foreground mt-1">/3 months</p>
                 <div className="mt-4 space-y-1.5">
@@ -49,13 +54,13 @@ const PricingComparison = () => {
           </ScrollReveal>
 
           <ScrollReveal direction="right">
-            <div className="bg-gradient-card rounded-xl p-4 border-2 border-primary/40 relative overflow-hidden shadow-glow h-full">
+            <div className="bg-gradient-card rounded-xl p-4 border-2 border-success/40 relative overflow-hidden shadow-glow h-full">
               <div className="absolute top-2 right-2 bg-success text-success-foreground text-[10px] font-bold px-2 py-0.5 rounded-full">
-                84% OFF
+                95% OFF
               </div>
               <div className="relative">
-                <p className="text-xs text-success mb-1">Our Price</p>
-                <p className="text-2xl font-bold text-gradient">₹399</p>
+                <p className="text-xs text-success mb-1 font-semibold">You Pay</p>
+                <p className="text-2xl font-bold text-success">₹399</p>
                 <p className="text-xs text-muted-foreground mt-1">/3 months</p>
                 <div className="mt-4 space-y-1.5">
                   {features.slice(0, 4).map((f) => (
@@ -66,7 +71,7 @@ const PricingComparison = () => {
                       <span className="text-xs text-foreground truncate">{f.name}</span>
                     </div>
                   ))}
-                  <p className="text-xs text-success">+4 more</p>
+                  <p className="text-xs text-success font-medium">+4 more</p>
                 </div>
               </div>
             </div>
@@ -76,15 +81,16 @@ const PricingComparison = () => {
         {/* Desktop: Full cards */}
         <div className="hidden md:grid md:grid-cols-2 gap-8">
           <ScrollReveal direction="left">
-            <div className="bg-gradient-card rounded-2xl p-8 border border-border relative overflow-hidden h-full">
+            <div className="bg-gradient-card rounded-2xl p-8 border border-border relative overflow-hidden h-full opacity-75">
               <div className="absolute top-0 right-0 w-32 h-32 bg-muted/20 rounded-full blur-3xl" />
               <div className="relative">
+                <p className="text-xs text-destructive font-semibold uppercase tracking-wider mb-2">❌ What LinkedIn Charges</p>
                 <h3 className="text-xl font-semibold mb-2 text-muted-foreground">Official Price</h3>
                 <div className="flex items-baseline gap-2 mb-6">
                   <span className="text-5xl font-bold text-muted-foreground line-through">₹7,500</span>
                   <span className="text-muted-foreground">/3 months</span>
                 </div>
-                <p className="text-sm text-muted-foreground mb-8">₹2,500/month × 3 months</p>
+                <p className="text-sm text-muted-foreground mb-8">₹2,500/month × 3 months = ouch</p>
                 <div className="space-y-3">
                   {features.slice(0, 5).map((f) => (
                     <div key={f.name} className="flex items-center gap-3 text-muted-foreground">
@@ -99,18 +105,19 @@ const PricingComparison = () => {
           </ScrollReveal>
 
           <ScrollReveal direction="right">
-            <div className="bg-gradient-card rounded-2xl p-8 border-2 border-primary/40 relative overflow-hidden shadow-glow h-full">
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/15 rounded-full blur-3xl" />
+            <div className="bg-gradient-card rounded-2xl p-8 border-2 border-success/40 relative overflow-hidden shadow-glow h-full">
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-success/15 rounded-full blur-3xl" />
               <div className="absolute top-4 right-4 bg-success text-success-foreground text-xs font-bold px-3 py-1 rounded-full">
-                SAVE 84%
+                SAVE ₹7,100
               </div>
               <div className="relative">
-                <h3 className="text-xl font-semibold mb-2 text-foreground">Our Exclusive Price</h3>
+                <p className="text-xs text-success font-semibold uppercase tracking-wider mb-2">✅ What You Pay With Us</p>
+                <h3 className="text-xl font-semibold mb-2 text-foreground">Our Price</h3>
                 <div className="flex items-baseline gap-2 mb-6">
-                  <span className="text-5xl font-bold text-gradient">₹399</span>
+                  <span className="text-5xl font-bold text-success">₹399</span>
                   <span className="text-muted-foreground">/3 months</span>
                 </div>
-                <p className="text-sm text-success mb-8">One-time payment • Full access • Pay after activation</p>
+                <p className="text-sm text-success mb-8 font-medium">One-time · Pay after activation · Same exact plan</p>
                 <div className="space-y-3">
                   {features.map((f) => (
                     <div key={f.name} className="flex items-center gap-3">
@@ -126,12 +133,17 @@ const PricingComparison = () => {
           </ScrollReveal>
         </div>
 
-        {/* Savings Banner */}
+        {/* Savings Banner + CTA */}
         <ScrollReveal delay={0.2}>
           <div className="mt-8 md:mt-12 bg-gradient-card rounded-2xl p-6 md:p-8 border border-success/30 text-center">
-            <p className="text-muted-foreground mb-2 text-sm md:text-base">Your Total Savings</p>
-            <p className="text-3xl md:text-6xl font-bold text-success">₹7,100</p>
-            <p className="text-muted-foreground mt-2 text-sm md:text-base">That's 84% off the official price!</p>
+            <p className="text-muted-foreground mb-2 text-sm md:text-base">You save</p>
+            <p className="text-4xl md:text-6xl font-bold text-success">₹7,100</p>
+            <p className="text-muted-foreground mt-2 text-sm md:text-base mb-6">That's 95% off — and you pay AFTER seeing it work.</p>
+            <Button variant="hero" size="xl" className="group shadow-glow" onClick={openModal}>
+              <span className="hidden sm:inline">Lock In ₹399 Before Price Increases</span>
+              <span className="sm:hidden">Lock In ₹399 Now</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </div>
         </ScrollReveal>
       </div>

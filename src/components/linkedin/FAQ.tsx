@@ -8,39 +8,44 @@ import ScrollReveal from "../adobe/ScrollReveal";
 
 const faqs = [
   {
-    question: "How does this subscription work?",
+    question: "Is this legit? How can it be so cheap?",
     answer:
-      "After your purchase, we upgrade your existing LinkedIn account to Premium Career directly on your personal email. You keep full control of your account — we just activate the premium features for 3 months.",
+      "100% legit. We source surplus corporate bulk vouchers that large companies buy for employees but don't fully use. These vouchers are about to expire, so we acquire them at steep discounts and pass the savings to you. The Premium you get is the exact same official LinkedIn Premium Career plan.",
   },
   {
-    question: "Is it activated on my own account?",
+    question: "Will it be activated on MY account?",
     answer:
-      "Yes! Unlike shared accounts, this is activated directly on your personal LinkedIn profile. All your connections, messages, and data remain exactly as they are — you simply get Premium features unlocked.",
+      "Yes. This is activated directly on your personal LinkedIn profile using your own email. All your connections, messages, and data remain exactly as they are — you simply get Premium features unlocked. No shared accounts. No fake profiles.",
   },
   {
-    question: "How will I receive my subscription?",
+    question: "Do I need to share my password?",
     answer:
-      "After payment confirmation, we'll activate Premium Career on your account within 24 hours. You'll receive a confirmation message once it's live. No credentials to manage — it's your own account.",
+      "Absolutely not. We never ask for your LinkedIn password. Our activation method is 100% secure and doesn't require any login credentials. We'll guide you through the simple process via WhatsApp — it takes less than 2 minutes.",
   },
   {
-    question: "What's included in Premium Career?",
+    question: "What if it doesn't work?",
     answer:
-      "You get 5 InMail credits per month, full profile viewer history (365 days), AI-powered resume and profile optimization, applicant insights on every job, Top Applicant badge, and unlimited access to 21,000+ LinkedIn Learning courses.",
+      'That\'s the beauty of our "Pay After Activation" guarantee. We activate first, you verify the Gold Badge is on your profile, and ONLY THEN do you pay. If it doesn\'t work, you owe us ₹0. Zero risk.',
   },
   {
-    question: "Do I need to share my LinkedIn password?",
+    question: "What exactly is included in Premium Career?",
     answer:
-      "We use a secure activation method that doesn't require your password. We'll guide you through the simple process via WhatsApp — it takes less than 2 minutes.",
+      "5 InMail credits per month (message anyone on LinkedIn), full profile viewer history (365 days), AI-powered resume optimization, applicant insights on every job, Top Applicant Gold Badge, unlimited access to 21,000+ LinkedIn Learning courses with certificates, and interview prep tools.",
   },
   {
     question: "What happens after 3 months?",
     answer:
-      "After the 3-month period ends, your account reverts to the free LinkedIn plan. You can purchase another subscription from us to continue, or subscribe directly through LinkedIn at their standard rates.",
+      "After the 3-month period, your account reverts to the free LinkedIn plan. No automatic charges. No surprises. You can purchase another activation from us at whatever the current batch price is, or subscribe directly through LinkedIn at ₹2,500/month.",
   },
   {
-    question: "Is there any support available?",
+    question: "How fast is the activation?",
     answer:
-      "Absolutely! We provide support via WhatsApp and phone. If you face any issues with your subscription, reach out to us and we'll assist you promptly. We also offer 24/7 phone support at 8971583467.",
+      "Most activations happen within 2-6 hours. Some within minutes. You'll receive a WhatsApp confirmation the moment it's live. We also provide 24/7 support at 8971583467 if you have any questions.",
+  },
+  {
+    question: "I'm still not sure...",
+    answer:
+      "We get it. Here's the thing — you literally pay nothing upfront. We activate first, you verify it works, then pay. If you're not happy, walk away. There is no scenario where you lose money. The only risk is missing out on this batch's ₹399 price.",
   },
 ];
 
@@ -50,26 +55,27 @@ const FAQ = () => {
       <div className="container max-w-3xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-16">
+            <p className="text-sm font-semibold text-success uppercase tracking-widest mb-3">Still Have Questions?</p>
             <h2 className="text-3xl md:text-5xl font-bold mb-4">
-              Frequently Asked <span className="text-gradient">Questions</span>
+              We'll Answer <span className="text-success">Everything</span>
             </h2>
             <p className="text-muted-foreground text-lg">
-              Everything you need to know about our LinkedIn Premium Career offer
+              If your question isn't here, WhatsApp us — we reply in minutes, not days.
             </p>
           </div>
         </ScrollReveal>
 
         <Accordion type="single" collapsible className="space-y-4">
           {faqs.map((faq, index) => (
-            <ScrollReveal key={index} delay={index * 0.1}>
+            <ScrollReveal key={index} delay={index * 0.08}>
               <AccordionItem
                 value={`item-${index}`}
-                className="bg-gradient-card rounded-xl border border-border px-6 data-[state=open]:border-primary/40 transition-colors"
+                className="bg-gradient-card rounded-xl border border-border px-6 data-[state=open]:border-success/40 transition-colors"
               >
                 <AccordionTrigger className="text-left hover:no-underline py-6 text-foreground font-medium">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6">
+                <AccordionContent className="text-muted-foreground pb-6 leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
