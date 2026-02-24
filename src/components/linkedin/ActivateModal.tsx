@@ -90,7 +90,7 @@ export const ActivateModalProvider = ({ children }: { children: ReactNode }) => 
               </div>
 
               <div className="flex items-center justify-center gap-2 mt-5 text-xs text-muted-foreground">
-                <Shield className="w-3.5 h-3.5 text-primary" />
+                <Shield className="w-3.5 h-3.5 text-success" />
                 Pay only after activation • Zero risk
               </div>
             </div>
@@ -153,11 +153,11 @@ export const ActivateModalProvider = ({ children }: { children: ReactNode }) => 
 
               <div className="mt-5 space-y-2">
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-primary flex-shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-success flex-shrink-0" />
                   We'll activate on your account, then you pay ₹399
                 </div>
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                  <Shield className="w-3.5 h-3.5 text-primary flex-shrink-0" />
+                  <Shield className="w-3.5 h-3.5 text-success flex-shrink-0" />
                   No password required • 100% safe
                 </div>
               </div>

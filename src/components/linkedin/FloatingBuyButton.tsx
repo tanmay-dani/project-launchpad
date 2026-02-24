@@ -45,7 +45,7 @@ const FloatingBuyButton = () => {
           Activate Premium — Pay After ₹399
         </Button>
         <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
-          <Button variant="outline" size="lg" className="aspect-square px-0 h-12 w-12 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+          <Button variant="outline" size="lg" className="aspect-square px-0 h-12 w-12 border-success text-success hover:bg-success hover:text-success-foreground">
             <WhatsAppIcon className="w-6 h-6" />
           </Button>
         </a>

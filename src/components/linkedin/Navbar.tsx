@@ -26,7 +26,7 @@ const Navbar = () => {
             <div className="flex items-center gap-2">
               <Button variant="hero" size="sm" onClick={openModal}>Activate Premium — ₹399</Button>
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="sm" className="aspect-square px-0 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                <Button variant="outline" size="sm" className="aspect-square px-0 border-success text-success hover:bg-success hover:text-success-foreground">
                   <WhatsAppIcon className="w-4 h-4" />
                 </Button>
               </a>
@@ -47,7 +47,7 @@ const Navbar = () => {
               <div className="flex items-center gap-2">
                 <Button variant="hero" size="default" className="flex-1" onClick={() => { openModal(); setIsOpen(false); }}>Activate Premium — ₹399</Button>
                 <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" size="default" className="aspect-square px-0 border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => setIsOpen(false)}>
+                  <Button variant="outline" size="default" className="aspect-square px-0 border-success text-success hover:bg-success hover:text-success-foreground" onClick={() => setIsOpen(false)}>
                     <WhatsAppIcon className="w-5 h-5" />
                   </Button>
                 </a>
