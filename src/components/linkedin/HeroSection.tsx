@@ -5,14 +5,45 @@ import { Button } from "@/components/ui/button";
 import linkedinLogo from "@/assets/logos/linkedin.png";
 import trustpilotLogo from "@/assets/trustpilot-logo.svg";
 import trustpilotStars from "@/assets/trustpilot-stars-4.svg";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { useActivateModal } from "./ActivateModal";
 
 const WHATSAPP_LINK = "https://wa.me/919040914544?text=Hi%2C%20I%20have%20a%20question%20about%20LinkedIn%20Premium%20Career";
 
+function useCountUp(end: number, duration = 2000, delay = 600) {
+  const [count, setCount] = useState(0);
+  const rafRef = useRef<number>();
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      const start = performance.now();
+      const step = (now: number) => {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        // Ease out cubic for smooth deceleration
+        const eased = 1 - Math.pow(1 - progress, 3);
+        setCount(Math.round(eased * end));
+        if (progress < 1) {
+          rafRef.current = requestAnimationFrame(step);
+        }
+      };
+      rafRef.current = requestAnimationFrame(step);
+    }, delay);
+
+    return () => {
+      clearTimeout(timeout);
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
+  }, [end, duration, delay]);
+
+  return count;
+}
+
 const HeroSection = () => {
   const [vouchersLeft, setVouchersLeft] = useState(14);
   const { openModal } = useActivateModal();
+  const activatedCount = useCountUp(2400, 2200, 800);
+  const percentCount = useCountUp(94, 1800, 1000);
 
   useEffect(() => {
     const stored = sessionStorage.getItem("li-vouchers");
@@ -104,12 +135,12 @@ const HeroSection = () => {
           >
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Users className="w-4 h-4 text-primary" />
-              <span><span className="text-foreground font-semibold">2,400+</span> activated</span>
+              <span><span className="text-foreground font-semibold tabular-nums">{activatedCount.toLocaleString()}+</span> activated</span>
             </div>
             <div className="hidden md:block w-px h-4 bg-border" />
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <TrendingUp className="w-4 h-4 text-check" />
-              <span><span className="text-foreground font-semibold">94%</span> see results in 2 weeks</span>
+              <span><span className="text-foreground font-semibold tabular-nums">{percentCount}%</span> see results in 2 weeks</span>
             </div>
             <div className="hidden md:block w-px h-4 bg-border" />
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
