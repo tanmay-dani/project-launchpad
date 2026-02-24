@@ -58,7 +58,7 @@ export const ActivateModalProvider = ({ children }: { children: ReactNode }) => 
     <ActivateModalContext.Provider value={{ openModal }}>
       {children}
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="sm:max-w-md bg-background border-border p-0 overflow-hidden">
+        <DialogContent className="linkedin-theme sm:max-w-md border-border p-0 overflow-hidden">
           {step === "confirm" ? (
             // Step 1: Micro-qualification
             <div className="p-6 md:p-8 text-center">
