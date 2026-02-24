@@ -15,37 +15,37 @@ const faqs = [
   {
     question: "Will it be activated on MY account?",
     answer:
-      "Yes. This is activated directly on your personal LinkedIn profile using your own email. All your connections, messages, and data remain exactly as they are — you simply get Premium features unlocked. No shared accounts. No fake profiles.",
+      "Yes. This is activated directly on your personal LinkedIn profile using your own email. All your connections, messages, and data stay exactly as they are. You simply get Premium features unlocked. No shared accounts, no fake profiles.",
   },
   {
     question: "Do I need to share my password?",
     answer:
-      "Absolutely not. We never ask for your LinkedIn password. Our activation method is 100% secure and doesn't require any login credentials. We'll guide you through the simple process via WhatsApp — it takes less than 2 minutes.",
+      "Absolutely not. We never ask for your LinkedIn password. Our activation method is completely secure and doesn't require any login credentials. We'll walk you through the simple process via WhatsApp. It takes less than 2 minutes.",
   },
   {
     question: "What if it doesn't work?",
     answer:
-      'That\'s the beauty of our "Pay After Activation" guarantee. We activate first, you verify the Gold Badge is on your profile, and ONLY THEN do you pay. If it doesn\'t work, you owe us ₹0. Zero risk.',
+      "That's the whole point of our \"Pay After Activation\" guarantee. We activate first, you verify the Gold Badge is on your profile, and only then do you pay. If it doesn't work, you owe us nothing. Simple as that.",
   },
   {
     question: "What exactly is included in Premium Career?",
     answer:
-      "5 InMail credits per month (message anyone on LinkedIn), full profile viewer history (365 days), AI-powered resume optimization, applicant insights on every job, Top Applicant Gold Badge, unlimited access to 21,000+ LinkedIn Learning courses with certificates, and interview prep tools.",
+      "You get 5 InMail credits per month so you can message anyone on LinkedIn, full profile viewer history for 365 days, AI-powered resume optimization, applicant insights on every job, the Top Applicant Gold Badge, unlimited access to 21,000+ LinkedIn Learning courses with certificates, and interview prep tools.",
   },
   {
     question: "What happens after 3 months?",
     answer:
-      "After the 3-month period, your account reverts to the free LinkedIn plan. No automatic charges. No surprises. You can purchase another activation from us at whatever the current batch price is, or subscribe directly through LinkedIn at ₹2,500/month.",
+      "After the 3-month period, your account goes back to the free LinkedIn plan. No automatic charges, no surprises. You can purchase another activation from us at whatever the current batch price is, or subscribe directly through LinkedIn at ₹2,500/month.",
   },
   {
     question: "How fast is the activation?",
     answer:
-      "Most activations happen within 2-6 hours. Some within minutes. You'll receive a WhatsApp confirmation the moment it's live. We also provide 24/7 support at 8971583467 if you have any questions.",
+      "Most activations happen within 2 to 6 hours. Some happen within minutes. You'll get a WhatsApp confirmation the moment it's live. We also have 24/7 support at 8971583467 if you need anything.",
   },
   {
     question: "I'm still not sure...",
     answer:
-      "We get it. Here's the thing — you literally pay nothing upfront. We activate first, you verify it works, then pay. If you're not happy, walk away. There is no scenario where you lose money. The only risk is missing out on this batch's ₹399 price.",
+      "Totally fair. Here's the thing though: you literally pay nothing upfront. We activate first, you verify it works, then pay. If you're not happy, just walk away. There's no scenario where you lose money. The only risk is missing out on this batch at ₹399.",
   },
 ];
 
@@ -60,7 +60,7 @@ const FAQ = () => {
               We'll Answer <span className="text-foreground">Everything</span>
             </h2>
             <p className="text-muted-foreground text-lg">
-              If your question isn't here, WhatsApp us — we reply in minutes, not days.
+              If your question isn't here, just WhatsApp us. We reply in minutes, not days.
             </p>
           </div>
         </ScrollReveal>

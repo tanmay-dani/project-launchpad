@@ -131,7 +131,7 @@ const PricingComparison = () => {
           <div className="mt-8 md:mt-12 bg-gradient-card rounded-2xl p-6 md:p-8 border border-border text-center">
             <p className="text-muted-foreground mb-2 text-sm md:text-base">You save</p>
             <p className="text-4xl md:text-6xl font-bold text-success">₹7,100</p>
-            <p className="text-muted-foreground mt-2 text-sm md:text-base mb-6">That's 95% off — and you pay AFTER seeing it work.</p>
+            <p className="text-muted-foreground mt-2 text-sm md:text-base mb-6">That's 95% off. And you pay AFTER seeing it work.</p>
             <Button variant="hero" size="xl" className="group shadow-glow" onClick={openModal}>
               <span className="hidden sm:inline">Lock In ₹399 Before Price Increases</span>
               <span className="sm:hidden">Lock In ₹399 Now</span>

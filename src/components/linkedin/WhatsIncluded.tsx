@@ -4,31 +4,31 @@ import ScrollReveal from "../adobe/ScrollReveal";
 const features = [
   {
     name: "5 InMail Credits/Month",
-    description: "Skip applying — DM recruiters and hiring managers directly",
+    description: "Message recruiters and hiring managers directly, skip the application queue",
     icon: MessageSquare,
     outcome: "Get replies, not rejections",
   },
   {
     name: "Profile Viewers (365 Days)",
-    description: "See every person who viewed your profile and reach out",
+    description: "See every single person who viewed your profile and reach out to them",
     icon: Eye,
-    outcome: "Turn stalkers into opportunities",
+    outcome: "Turn interest into opportunities",
   },
   {
     name: "21,000+ Learning Courses",
-    description: "Master AI, Python, Marketing — get LinkedIn certificates",
+    description: "Learn AI, Python, Marketing and earn LinkedIn certificates",
     icon: GraduationCap,
     outcome: "Upskill in days, not months",
   },
   {
     name: "Applicant Insights",
-    description: "See how you compare against other applicants on any job",
+    description: "See how you stack up against other applicants on any job posting",
     icon: BarChart3,
     outcome: "Know your edge before applying",
   },
   {
     name: "AI Resume & Profile Tools",
-    description: "AI rewrites your headline, summary, and resume in 2 minutes",
+    description: "AI rewrites your headline, summary, and resume in under 2 minutes",
     icon: Sparkles,
     outcome: "10x more profile views",
   },
@@ -40,13 +40,13 @@ const features = [
   },
   {
     name: "Company Insights",
-    description: "Growth trends, hiring patterns, salary data — before you apply",
+    description: "See growth trends, hiring patterns, and salary data before you apply",
     icon: Search,
     outcome: "Apply smarter, not harder",
   },
   {
     name: "Interview Prep Tools",
-    description: "AI-powered mock interviews and preparation",
+    description: "Practice with AI mock interviews and get feedback",
     icon: BookOpen,
     outcome: "Walk in confident, walk out hired",
   },
@@ -86,7 +86,7 @@ const WhatsIncluded = () => {
         <ScrollReveal delay={0.4}>
           <div className="mt-12 text-center">
             <p className="text-muted-foreground">
-              All activated on <span className="text-foreground font-medium">your own personal email</span> — no shared accounts
+              All activated on <span className="text-foreground font-medium">your own personal email</span>. No shared accounts.
             </p>
           </div>
         </ScrollReveal>

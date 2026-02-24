@@ -11,11 +11,11 @@ const painPoints = [
 ];
 
 const transformations = [
-  "Recruiters find YOU — Gold Badge makes you 3x more visible",
-  "DM any hiring manager directly with 5 InMails/month",
-  "See exactly who stalked your profile — message them back",
-  "AI optimizes your resume in 2 minutes — stand out instantly",
-  "Compare yourself vs other applicants — know your edge",
+  "Recruiters actually find YOU because the Gold Badge makes you 3x more visible",
+  "You can DM any hiring manager directly with 5 InMails every month",
+  "You'll see exactly who checked your profile and message them back",
+  "AI optimizes your resume in 2 minutes so you stand out instantly",
+  "You can compare yourself against other applicants and know your edge",
 ];
 
 const ProblemSolution = () => {

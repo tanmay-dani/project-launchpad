@@ -143,7 +143,7 @@ const HeroSection = () => {
               </div>
               <div className="flex items-center gap-2.5">
                 <Shield className="w-4 h-4 text-premium-gold flex-shrink-0" />
-                <span className="text-sm text-premium-gold font-semibold">Pay only after activation — zero risk</span>
+                <span className="text-sm text-premium-gold font-semibold">Pay only after activation. Zero risk.</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Zap className="w-4 h-4 text-primary flex-shrink-0" />

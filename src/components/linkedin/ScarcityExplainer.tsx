@@ -36,7 +36,7 @@ const ScarcityExplainer = () => {
               Large companies buy LinkedIn Premium vouchers in bulk for employees. When employees don't use them, these vouchers go to waste. We buy these <span className="text-foreground font-medium">surplus corporate vouchers</span> before they expire and pass the savings directly to you.
             </p>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              It's the <span className="text-foreground font-medium">same official LinkedIn Premium</span> — activated on your own email, with your own data. The only difference? You're paying 95% less because we cracked the supply chain.
+              It's the <span className="text-foreground font-medium">same official LinkedIn Premium</span>, activated on your own email, with your own data. The only difference is you're paying 95% less because we cracked the supply chain.
             </p>
 
             <div className="bg-destructive/8 border border-destructive/15 rounded-xl p-4 flex items-center gap-3">
