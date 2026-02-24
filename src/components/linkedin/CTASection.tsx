@@ -2,10 +2,13 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "../adobe/WhatsAppIcon";
 import ScrollReveal from "../adobe/ScrollReveal";
+import { useActivateModal } from "./ActivateModal";
 
-const WHATSAPP_LINK = "https://wa.me/919040914544?text=Hi%2C%20I%20want%20to%20avail%20LinkedIn%20Premium%20Career%20for%203%20months%20at%20₹399";
+const WHATSAPP_LINK = "https://wa.me/919040914544?text=Hi%2C%20I%20have%20a%20question%20about%20LinkedIn%20Premium%20Career";
 
 const CTASection = () => {
+  const { openModal } = useActivateModal();
+
   return (
     <section className="py-20 px-4 relative overflow-hidden">
       <div className="absolute inset-0 flex items-center justify-center">
@@ -26,12 +29,10 @@ const CTASection = () => {
             </p>
             
             <div className="flex flex-col items-center gap-3">
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                <Button variant="hero" size="xl" className="group shadow-glow">
-                  Yes! Activate Premium — ₹399
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </a>
+              <Button variant="hero" size="xl" className="group shadow-glow" onClick={openModal}>
+                Activate My Premium (Pay After Activation)
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                 <WhatsAppIcon className="w-4 h-4" />
                 Have questions? Chat with a human

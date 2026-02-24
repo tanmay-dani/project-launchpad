@@ -4,11 +4,13 @@ import WhatsAppIcon from "../adobe/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 import linkedinLogo from "@/assets/logos/linkedin.png";
 import { useState, useEffect } from "react";
+import { useActivateModal } from "./ActivateModal";
 
-const WHATSAPP_LINK = "https://wa.me/919040914544?text=Hi%2C%20I%20want%20to%20avail%20LinkedIn%20Premium%20Career%20for%203%20months%20at%20₹399";
+const WHATSAPP_LINK = "https://wa.me/919040914544?text=Hi%2C%20I%20have%20a%20question%20about%20LinkedIn%20Premium%20Career";
 
 const HeroSection = () => {
   const [vouchersLeft, setVouchersLeft] = useState(14);
+  const { openModal } = useActivateModal();
 
   useEffect(() => {
     const stored = sessionStorage.getItem("li-vouchers");
@@ -25,7 +27,6 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -45,7 +46,6 @@ const HeroSection = () => {
 
       <div className="container max-w-5xl mx-auto relative z-10">
         <div className="text-center">
-          {/* Scarcity Pre-headline */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -58,7 +58,6 @@ const HeroSection = () => {
             </span>
           </motion.div>
 
-          {/* Direct headline — Meta-optimized */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -70,7 +69,6 @@ const HeroSection = () => {
             <span className="text-gradient">for ₹399</span> — <span className="text-foreground">Pay After Activation</span>
           </motion.h1>
 
-          {/* Sub-headline — clear value prop */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -82,7 +80,6 @@ const HeroSection = () => {
             <span className="text-primary font-bold">We activate first. You pay only after you see it working.</span>
           </motion.p>
 
-          {/* Price Anchor Card */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -118,19 +115,16 @@ const HeroSection = () => {
             </div>
           </motion.div>
 
-          {/* CTA — Single dominant green */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
             className="flex flex-col items-center gap-3 mb-6"
           >
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-              <Button variant="hero" size="xl" className="group shadow-glow">
-                Yes! Activate Premium for ₹399
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </a>
+            <Button variant="hero" size="xl" className="group shadow-glow" onClick={openModal}>
+              Activate My Premium (Pay After Activation)
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
               <WhatsAppIcon className="w-4 h-4" />
               Have questions? Chat with a human
@@ -146,7 +140,6 @@ const HeroSection = () => {
             No password needed · Instant activation · 2,400+ customers served
           </motion.p>
 
-          {/* Trust Badges */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

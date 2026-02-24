@@ -9,24 +9,27 @@ import FAQ from "@/components/linkedin/FAQ";
 import CTASection from "@/components/linkedin/CTASection";
 import Footer from "@/components/linkedin/Footer";
 import FloatingBuyButton from "@/components/linkedin/FloatingBuyButton";
+import { ActivateModalProvider } from "@/components/linkedin/ActivateModal";
 
 const LinkedInLanding = () => {
   return (
-    <div className="linkedin-theme min-h-screen bg-background">
-      <Navbar />
-      <main className="pb-28">
-        <HeroSection />
-        <ValueStack />
-        <ProblemSolution />
-        <ScarcityExplainer />
-        <TrustpilotReviews />
-        <GuaranteeSection />
-        <FAQ />
-        <CTASection />
-      </main>
-      <Footer />
-      <FloatingBuyButton />
-    </div>
+    <ActivateModalProvider>
+      <div className="linkedin-theme min-h-screen bg-background">
+        <Navbar />
+        <main className="pb-28">
+          <HeroSection />
+          <ValueStack />
+          <ProblemSolution />
+          <ScarcityExplainer />
+          <TrustpilotReviews />
+          <GuaranteeSection />
+          <FAQ />
+          <CTASection />
+        </main>
+        <Footer />
+        <FloatingBuyButton />
+      </div>
+    </ActivateModalProvider>
   );
 };
 
