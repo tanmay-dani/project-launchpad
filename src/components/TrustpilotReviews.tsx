@@ -29,11 +29,16 @@ export function TrustpilotReviews() {
           Real reviews from real customers on Trustpilot
         </p>
 
-        <div className="mt-4 inline-flex items-center gap-3 rounded-full bg-[#050816] px-4 py-2 text-xs sm:text-sm text-slate-200">
+        <a
+          href="https://www.trustpilot.com/review/thepremiumnest.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-flex items-center gap-3 rounded-full bg-[#050816] px-4 py-2 text-xs sm:text-sm text-slate-200 transition hover:bg-black"
+        >
           <img src={trustpilotStars} alt="Trustpilot 4.2 stars" className="h-5" />
           <span>4.2 out of 5 · 6 reviews on</span>
           <img src={trustpilotLogo} alt="Trustpilot" className="h-4" />
-        </div>
+        </a>
       </div>
 
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
