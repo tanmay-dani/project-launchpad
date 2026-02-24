@@ -1,4 +1,5 @@
 import { useState, createContext, useContext, ReactNode } from "react";
+import { useNavigate } from "react-router-dom";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,6 +18,7 @@ export const useActivateModal = () => useContext(ActivateModalContext);
 
 export const ActivateModalProvider = ({ children }: { children: ReactNode }) => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
   const [step, setStep] = useState<"confirm" | "form">("confirm");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -115,7 +117,7 @@ export const ActivateModalProvider = ({ children }: { children: ReactNode }) => 
                   variant="heroOutline"
                   size="lg"
                   className="w-full"
-                  onClick={() => setOpen(false)}
+                  onClick={() => { setOpen(false); navigate("/"); }}
                 >
                   Maybe Later
                 </Button>
