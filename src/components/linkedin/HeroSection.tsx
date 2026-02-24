@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Zap, Clock, CheckCircle2, Users, TrendingUp, Star } from "lucide-react";
+import { ArrowRight, Shield, Zap, Clock, CheckCircle2, Users, TrendingUp } from "lucide-react";
 import WhatsAppIcon from "../adobe/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 import linkedinLogo from "@/assets/logos/linkedin.png";
+import trustpilotLogo from "@/assets/trustpilot-logo.svg";
+import trustpilotStars from "@/assets/trustpilot-stars-4.svg";
 import { useState, useEffect } from "react";
 import { useActivateModal } from "./ActivateModal";
 
@@ -121,21 +123,14 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.28 }}
-            className="flex items-center justify-center gap-2 mb-8"
+            className="flex items-center justify-center gap-3 mb-8"
           >
             <a
               href="#reviews"
-              className="flex items-center gap-1.5 hover:opacity-80 transition-opacity"
+              className="flex items-center gap-2 hover:opacity-80 transition-opacity"
             >
-              <span className="text-sm text-muted-foreground">Rated</span>
-              <span className="text-sm font-semibold text-foreground">4.2</span>
-              <span className="text-sm text-muted-foreground">out of 5</span>
-              <span className="flex items-center gap-0.5 mx-1">
-                {[1, 2, 3, 4].map(i => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-[#00b67a] text-[#00b67a]" />
-                ))}
-                <Star className="w-3.5 h-3.5 fill-muted text-muted" />
-              </span>
+              <span className="text-sm text-muted-foreground">Rated <span className="text-foreground font-semibold">4.2</span> out of 5</span>
+              <img src={trustpilotStars} alt="4 out of 5 stars" className="h-4" />
               <span className="text-sm text-muted-foreground">based on 7 reviews on</span>
             </a>
             <a
@@ -144,7 +139,7 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity"
             >
-              <span className="text-sm font-semibold text-[#00b67a]">★ Trustpilot</span>
+              <img src={trustpilotLogo} alt="Trustpilot" className="h-5" />
             </a>
           </motion.div>
 
