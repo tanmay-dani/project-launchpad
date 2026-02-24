@@ -12,6 +12,7 @@ export type Review = {
 };
 
 export const reviews: Review[] = [
+  // Reviews with profile photos first
   {
     name: "Pawan Kulegi",
     rating: 5,
@@ -19,6 +20,31 @@ export const reviews: Review[] = [
     title: "Had an amazing experience dealing with The Premium Nest",
     text: "I bought Linkedin Premium for 3 months, the seller sent the link first and I paid after I activated the subscription, the transaction was smooth and fast. I am planning to buy more stuff from him soon.",
     avatar: pawanImg,
+  },
+  {
+    name: "Krish Sinha",
+    rating: 5,
+    date: "Oct 19, 2025",
+    title: "The most reliable service provider since 2018",
+    text: "I have been a customer of The Premium Nest since 2018. The pricing is awesome and so much cheaper than the regular market. Highly recommend them, it might sound scammy at first but their service proves otherwise.",
+    avatar: krishImg,
+  },
+  {
+    name: "Tara Pandey",
+    rating: 5,
+    date: "Feb 20, 2026",
+    title: "Got Linkedin Career Premium at a reasonable price",
+    text: "I am a 3rd year student at Christ and was applying to internships. He provided the link before and took the payment after activation. I have recommended this site to my friends who are starting their job search journey.",
+    avatar: taraImg,
+  },
+  // Reviews without profile photos
+  {
+    name: "Rishi Patel",
+    rating: 5,
+    date: "Feb 24, 2026",
+    title: "I recently purchased a 12-month LinkedIn Career subscription",
+    text: "I recently purchased a 12-month LinkedIn Career subscription from The Premium Nest and had a great experience. The process was smooth, activation was quick, and their communication was clear and professional. Everything was delivered as promised without any issues. Reliable service and competitive pricing make them a trustworthy option for premium digital subscriptions.",
+    avatar: null,
   },
   {
     name: "Rohan Vora",
@@ -44,29 +70,4 @@ export const reviews: Review[] = [
     text: "It was really seamless experience buying from them, and prices are affordable. The experience felt really trustworthy and legit. Will be back soon for more!",
     avatar: null,
   },
-  {
-    name: "Krish Sinha",
-    rating: 5,
-    date: "Oct 19, 2025",
-    title: "The most reliable service provider since 2018",
-    text: "I have been a customer of The Premium Nest since 2018. The pricing is awesome and so much cheaper than the regular market. Highly recommend them, it might sound scammy at first but their service proves otherwise.",
-    avatar: krishImg,
-  },
-  {
-    name: "Tara Pandey",
-    rating: 5,
-    date: "Feb 20, 2026",
-    title: "Got Linkedin Career Premium at a reasonable price",
-    text: "I am a 3rd year student at Christ and was applying to internships. He provided the link before and took the payment after activation. I have recommended this site to my friends who are starting their job search journey.",
-    avatar: taraImg,
-  },
-  {
-    name: "Rishi Patel",
-    rating: 5,
-    date: "Feb 24, 2026",
-    title: "I recently purchased a 12-month LinkedIn Career subscription",
-    text: "I recently purchased a 12-month LinkedIn Career subscription from The Premium Nest and had a great experience. The process was smooth, activation was quick, and their communication was clear and professional. Everything was delivered as promised without any issues. Reliable service and competitive pricing make them a trustworthy option for premium digital subscriptions.",
-    avatar: null,
-  },
 ];
-
