@@ -4,43 +4,51 @@ import ScrollReveal from "../adobe/ScrollReveal";
 const features = [
   {
     name: "5 InMail Credits/Month",
-    description: "Message recruiters & hiring managers directly",
+    description: "Skip applying — DM recruiters and hiring managers directly",
     icon: MessageSquare,
+    outcome: "Get replies, not rejections",
   },
   {
     name: "Profile Viewers (365 Days)",
-    description: "See everyone who viewed your profile in the last year",
+    description: "See every person who viewed your profile and reach out",
     icon: Eye,
+    outcome: "Turn stalkers into opportunities",
   },
   {
     name: "21,000+ Learning Courses",
-    description: "Full access to LinkedIn Learning library",
+    description: "Master AI, Python, Marketing — get LinkedIn certificates",
     icon: GraduationCap,
+    outcome: "Upskill in days, not months",
   },
   {
     name: "Applicant Insights",
-    description: "Compare yourself against other applicants on any job",
+    description: "See how you compare against other applicants on any job",
     icon: BarChart3,
+    outcome: "Know your edge before applying",
   },
   {
     name: "AI Resume & Profile Tools",
-    description: "AI-powered optimization for your resume and profile",
+    description: "AI rewrites your headline, summary, and resume in 2 minutes",
     icon: Sparkles,
+    outcome: "10x more profile views",
   },
   {
-    name: "Top Applicant Badge",
-    description: "Stand out to recruiters as a featured applicant",
+    name: "Top Applicant Gold Badge",
+    description: "Your profile gets highlighted to recruiters automatically",
     icon: UserCheck,
+    outcome: "3x more recruiter attention",
   },
   {
     name: "Company Insights",
-    description: "See growth trends, hiring patterns & employee data",
+    description: "Growth trends, hiring patterns, salary data — before you apply",
     icon: Search,
+    outcome: "Apply smarter, not harder",
   },
   {
     name: "Interview Prep Tools",
-    description: "AI-powered interview preparation and practice",
+    description: "AI-powered mock interviews and preparation",
     icon: BookOpen,
+    outcome: "Walk in confident, walk out hired",
   },
 ];
 
@@ -50,11 +58,12 @@ const WhatsIncluded = () => {
       <div className="container max-w-6xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-16">
+            <p className="text-sm font-semibold text-success uppercase tracking-widest mb-3">What's Inside</p>
             <h2 className="text-3xl md:text-5xl font-bold mb-4">
-              Everything You <span className="text-gradient">Get</span>
+              8 Premium Tools That <span className="text-success">Get You Hired</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              LinkedIn Premium Career gives you the ultimate unfair advantage in your job search
+              Each one designed to give you an <span className="text-foreground font-semibold">unfair advantage</span> over every other applicant
             </p>
           </div>
         </ScrollReveal>
@@ -62,12 +71,13 @@ const WhatsIncluded = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {features.map((feature, index) => (
             <ScrollReveal key={feature.name} delay={index * 0.08}>
-              <div className="group bg-gradient-card rounded-xl p-6 border border-border hover:border-primary/40 transition-all duration-300 hover:shadow-glow hover:-translate-y-1 h-full">
-                <div className="w-14 h-14 mb-4 rounded-xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-7 h-7 text-primary" />
+              <div className="group bg-gradient-card rounded-xl p-5 md:p-6 border border-border hover:border-success/40 transition-all duration-300 hover:shadow-glow hover:-translate-y-1 h-full flex flex-col">
+                <div className="w-12 h-12 md:w-14 md:h-14 mb-4 rounded-xl bg-success/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-6 h-6 md:w-7 md:h-7 text-success" />
                 </div>
-                <h3 className="font-semibold text-foreground mb-1">{feature.name}</h3>
-                <p className="text-sm text-muted-foreground">{feature.description}</p>
+                <h3 className="font-semibold text-foreground mb-1 text-sm md:text-base">{feature.name}</h3>
+                <p className="text-xs md:text-sm text-muted-foreground mb-2 flex-1">{feature.description}</p>
+                <p className="text-xs font-semibold text-success">→ {feature.outcome}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -76,7 +86,7 @@ const WhatsIncluded = () => {
         <ScrollReveal delay={0.4}>
           <div className="mt-12 text-center">
             <p className="text-muted-foreground">
-              Upgraded on <span className="text-primary font-semibold">your own personal email</span> — no shared accounts
+              All activated on <span className="text-success font-semibold">your own personal email</span> — no shared accounts, no compromises
             </p>
           </div>
         </ScrollReveal>
