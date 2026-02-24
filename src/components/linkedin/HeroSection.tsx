@@ -149,19 +149,30 @@ const HeroSection = () => {
             </div>
           </motion.div>
 
-          {/* Trustpilot Badge */}
-          <motion.a
-            href="#reviews"
+          {/* Trustpilot Trust Strip — matches Adobe style */}
+          <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.28 }}
-            className="flex items-center justify-center gap-2 mb-8 hover:opacity-80 transition-opacity cursor-pointer"
+            className="flex flex-wrap items-center justify-center gap-2 mb-8"
           >
-            <span className="text-sm text-muted-foreground">Rated <span className="text-foreground font-semibold">4.2</span> out of 5</span>
-            <img src={trustpilotStars} alt="4 out of 5 stars" className="h-4" />
-            <span className="text-sm text-muted-foreground">based on 7 reviews on</span>
-            <img src={trustpilotLogo} alt="Trustpilot" className="h-5" />
-          </motion.a>
+            <div className="flex items-center gap-2">
+              <img src={trustpilotStars} alt="Trustpilot 4 stars" className="h-5" />
+              <span className="text-sm font-semibold text-foreground">4.2/5</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="text-xs text-muted-foreground">on</span>
+              <img src={trustpilotLogo} alt="Trustpilot" className="h-4" />
+            </div>
+            <a
+              href="https://www.trustpilot.com/review/thepremiumnest.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-medium text-primary hover:text-primary/80 underline underline-offset-2 transition-colors"
+            >
+              View on Trustpilot →
+            </a>
+          </motion.div>
 
           {/* Pricing Card */}
           <motion.div
