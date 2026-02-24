@@ -32,7 +32,7 @@ export const ActivateModalProvider = ({ children }: { children: ReactNode }) => 
     setOpen(true);
   };
 
-  const GOOGLE_SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbyWB7_EbammPb5_OX4NNgnzbv1rpOOGgM8dQdj1rAyBDhRjvl8jsGlytsks2acsQimhxA/exec";
+  const GOOGLE_SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbwLuPfR9E39P4t5Ie_qkmwNVdKD_JuBKxLdKroPMA-cxP1jbtCMvHouOdd-pkglHAZvpg/exec";
 
   const submitLead = async (trimmedName: string, trimmedEmail: string, trimmedWhatsapp: string) => {
     try {
