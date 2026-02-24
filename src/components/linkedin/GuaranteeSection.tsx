@@ -27,7 +27,7 @@ const GuaranteeSection = () => {
               </h2>
 
               <p className="text-muted-foreground mb-8 max-w-xl mx-auto text-lg">
-                We know the internet is full of scams. That's why we put our money where our mouth is — <span className="text-foreground font-medium">we do the work first, and you pay only when you're satisfied.</span>
+                We know the internet is full of scams. That's why we put our money where our mouth is. <span className="text-foreground font-medium">We do the work first, and you pay only when you're satisfied.</span>
               </p>
 
               <div className="space-y-5 max-w-md mx-auto text-left mb-8">

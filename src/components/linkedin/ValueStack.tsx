@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 import { useActivateModal } from "./ActivateModal";
 
 const stackItems = [
-  { component: "3 Months LinkedIn Premium Career (Official Plan)", value: "₹7,500", subtext: "Same plan others pay ₹2,500/mo for" },
-  { component: "15 InMail Credits — DM Any Recruiter or CEO", value: "₹3,000", subtext: "Skip the queue, get replies in hours" },
-  { component: "Who Viewed Your Profile — Full 365 Days", value: "₹1,500", subtext: "See who's interested & message them back" },
-  { component: "21,000+ LinkedIn Learning Courses", value: "₹5,000", subtext: "Upskill in AI, Python, Marketing — free certificates" },
+  { component: "3 Months LinkedIn Premium Career (Official Plan)", value: "₹7,500", subtext: "The same plan others pay ₹2,500/mo for" },
+  { component: "15 InMail Credits to DM Any Recruiter or CEO", value: "₹3,000", subtext: "Skip the queue and get replies in hours" },
+  { component: "Who Viewed Your Profile for Full 365 Days", value: "₹1,500", subtext: "See who's interested and message them back" },
+  { component: "21,000+ LinkedIn Learning Courses", value: "₹5,000", subtext: "Upskill in AI, Python, Marketing with free certificates" },
   { component: "Top Applicant Gold Badge", value: "Priceless", subtext: "Recruiters see you FIRST on every job" },
   { component: 'BONUS: "Pay After Activation" Safety Net', value: "Priceless", isBonus: true, subtext: "We activate first. You pay only after seeing proof." },
 ];
@@ -25,7 +25,7 @@ const ValueStack = () => {
               Here's Everything You Get <span className="text-premium-gold">Today</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              We didn't just make it cheap — we made it a <span className="text-foreground font-medium">no-brainer.</span>
+              We didn't just make it affordable. We made it a <span className="text-foreground font-medium">complete no-brainer.</span>
             </p>
           </div>
         </ScrollReveal>
