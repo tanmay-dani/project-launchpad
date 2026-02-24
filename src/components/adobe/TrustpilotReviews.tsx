@@ -26,7 +26,7 @@ const TrustpilotReviews = () => {
             <div className="flex items-center justify-center gap-3 mb-3">
               <img src={trustpilotStars} alt="Trustpilot 4 stars" className="h-6" />
               <span className="text-sm font-medium text-muted-foreground">
-                4.2 out of 5 · 6 reviews on
+                4.2 out of 5 · 7 reviews on
               </span>
               <img src={trustpilotLogo} alt="Trustpilot" className="h-5" />
             </div>
