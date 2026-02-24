@@ -121,8 +121,9 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="flex flex-col items-center gap-3 mb-6"
           >
-            <Button variant="hero" size="xl" className="group shadow-glow" onClick={openModal}>
-              Activate My Premium (Pay After Activation)
+            <Button variant="hero" size="xl" className="group shadow-glow text-base md:text-lg" onClick={openModal}>
+              <span className="hidden sm:inline">Activate My Premium (Pay After Activation)</span>
+              <span className="sm:hidden">Activate Premium · Pay Later</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
