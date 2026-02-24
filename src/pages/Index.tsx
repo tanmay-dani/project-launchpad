@@ -18,9 +18,9 @@ const GOOGLE_FORM_URL = "https://forms.gle/gt94dHa3HAhuJLNu7";
 const categories = [
   { key: "all", label: "All", emoji: "🔥" },
   { key: "streaming", label: "Streaming", emoji: "📺" },
+  { key: "adult", label: "18+ Adult", emoji: "🔞" },
   { key: "career", label: "Career", emoji: "💼" },
   { key: "ai", label: "AI", emoji: "🤖" },
-  { key: "adult", label: "18+ Adult", emoji: "🔞" },
   { key: "design", label: "Design", emoji: "🎨" },
   { key: "learning", label: "Learning", emoji: "🎓" },
   { key: "productivity", label: "Productivity", emoji: "📄" },
