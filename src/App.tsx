@@ -11,6 +11,7 @@ import RefundPolicy from "./pages/RefundPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
 import AdobeLanding from "./pages/AdobeLanding";
+import LinkedInLanding from "./pages/LinkedInLanding";
 import ThankYou from "./pages/ThankYou";
 
 const queryClient = new QueryClient();
@@ -29,7 +30,8 @@ const App = () => (
         <PageTracker>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/adobe" element={<AdobeLanding />} />
+           <Route path="/adobe" element={<AdobeLanding />} />
+           <Route path="/linkedin" element={<LinkedInLanding />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
