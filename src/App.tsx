@@ -15,6 +15,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const AdobeLanding = lazy(() => import("./pages/AdobeLanding"));
 const LinkedInLanding = lazy(() => import("./pages/LinkedInLanding"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
+const PayRedirect = lazy(() => import("./pages/PayRedirect"));
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => (
            <Route path="/adobe" element={<AdobeLanding />} />
            <Route path="/linkedin" element={<LinkedInLanding />} />
           <Route path="/thank-you" element={<ThankYou />} />
+          <Route path="/pay" element={<PayRedirect />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
