@@ -48,8 +48,8 @@ export function TrustpilotReviews() {
           rel="noopener noreferrer"
           className="mt-4 inline-flex items-center gap-3 rounded-full bg-[#050816] px-4 py-2 text-xs sm:text-sm text-slate-200 transition hover:bg-black"
         >
-          <img src={trustpilotStars} alt="Trustpilot 4.2 stars" className="h-5" />
-          <span>4.2 out of 5 · 7 reviews on</span>
+          <img src={trustpilotStars} alt="Trustpilot 4.3 stars" className="h-5" />
+          <span>4.3 out of 5 · 7 reviews on</span>
           <img src={trustpilotLogo} alt="Trustpilot" className="h-4" />
         </a>
       </div>

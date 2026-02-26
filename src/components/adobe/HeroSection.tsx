@@ -105,7 +105,7 @@ const HeroSection = () => {
           >
             <div className="flex items-center gap-2">
               <img src={trustpilotStars} alt="Trustpilot 4 stars" className="h-5" />
-              <span className="text-sm font-semibold text-foreground">4.2/5</span>
+              <span className="text-sm font-semibold text-foreground">4.3/5</span>
             </div>
             <span className="hidden sm:block w-px h-4 bg-border" />
             <div className="flex items-center gap-1.5">
