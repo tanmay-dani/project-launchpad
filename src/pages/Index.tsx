@@ -227,10 +227,10 @@ const Index = () => {
               >
                 <img
                   src={trustpilotStars}
-                  alt="Trustpilot 4.2 stars"
-                  className="h-4"
-                />
-                <span>4.2 out of 5 · 7 reviews on</span>
+                   alt="Trustpilot 4.3 stars"
+                   className="h-4"
+                 />
+                 <span>4.3 out of 5 · 7 reviews on</span>
                 <img
                   src={trustpilotLogo}
                   alt="Trustpilot"
