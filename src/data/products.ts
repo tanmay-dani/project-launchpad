@@ -142,7 +142,7 @@ export const products: Product[] = [
       { label: "6 Months", price: "₹549", originalPrice: "₹894", duration: "6 Months" },
       { label: "12 Months", price: "₹999", originalPrice: "₹1,788", duration: "12 Months" },
     ],
-    paymentNote: "💳 Payment after activation (1 Month plan)",
+    paymentNote: "💳 Payment after activation on all plans",
   },
   {
     id: 6,
