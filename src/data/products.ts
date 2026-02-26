@@ -139,6 +139,8 @@ export const products: Product[] = [
     variants: [
       { label: "1 Month (Invite)", price: "₹89", originalPrice: "₹149/mo", duration: "1 Month" },
       { label: "3 Months", price: "₹299", originalPrice: "₹449", duration: "3 Months" },
+      { label: "6 Months", price: "₹549", originalPrice: "₹894", duration: "6 Months" },
+      { label: "12 Months", price: "₹999", originalPrice: "₹1,788", duration: "12 Months" },
     ],
     paymentNote: "💳 Payment after activation (1 Month plan)",
   },
